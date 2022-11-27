@@ -1,0 +1,39 @@
+.topbar_container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin-right: 200px;
+  padding: 10px 0;
+}
+
+.social_icon {
+  font-size: 16px;
+  color: white;
+  margin: 0 5px;
+}
+
+.social_icon:hover {
+  color: #BEFF25;
+}
+
+.span_topbar {
+  margin-right: 5px;
+  color: white;
+}
+
+.span_topbar::after {
+  content: "|";
+  color: white;
+  margin-left: 10px;
+}
+
+@media (max-width: 1148px) {
+  .topbar_container {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 999px) {
+  .topbar_container {
+    display: none;  }
+}
