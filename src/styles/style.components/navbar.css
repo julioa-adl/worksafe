@@ -1,3 +1,4 @@
+
 .navbar_container {
   display: flex;
   align-items: center;
@@ -34,6 +35,7 @@
 .NL:hover {
   color: #BEFF25;
   font-weight: 550;
+  text-decoration: underline #BEFF25;
 }
 
 .bttn_fale {
@@ -71,21 +73,18 @@
 @media (max-width: 1420px) {
   .nav_list {
     gap: 40px;
+    display: none;
   }
 }
 
 @media (max-width: 1148px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .navbar_container {
     margin: 0 20px;
     padding: 24px 0;
   }
 
   .nav_list {
-    position: absolute;
+    position: fixed;
     top: 12vh;
     right: 0;
     width: 50vw;
@@ -96,6 +95,7 @@
     justify-content: space-evenly;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
+    z-index: 10;
   }
 
   .nav_list li {
@@ -131,6 +131,10 @@
 }
 
 @media (max-width: 900px) {
+  body, html {
+    overflow-x: hidden !important;
+  }
+
   .bttn_fale {
     display: none;
   }

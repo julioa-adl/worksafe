@@ -1,0 +1,191 @@
+.main {
+  overflow-x: hidden;
+}
+
+.main_section_1 {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 200px;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.line {
+  margin: 50px 0;
+  width: 200px;
+  color: #BEFF25;
+  transition-duration: 0.4s;
+}
+
+.main_section_1 h2 {
+  color: #BEFF25;
+  font-size: 32px;
+  text-align: center;
+}
+
+.main_section_1 p {
+  padding: 0 10vw;
+  text-align: center;
+  font-size: 16px;
+}
+
+.main_section_2 {
+  display: flex;
+  background-color: black;
+  padding: 50px 200px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  overflow-y: hidden;
+}
+
+.icons_cards {
+  font-size: 50px;
+  color: #BEFF25;
+}
+
+.cards_div h1 {
+  color: #BEFF25;
+}
+
+.cards_div p {
+  color: white;
+  text-align: justify;
+}
+
+.cards_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: stretch;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+  max-width: 400px;
+  height: 240px;
+  background-color: #222222;
+  border-radius: 8px;
+  resize: none;
+}
+
+@media (max-width: 1650px) {
+  .main_section_1 {
+    padding: 50px 200px;
+  }
+
+  .main_section_2 {
+    padding: 50px 200px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+
+  .main_section_1 p {
+    padding: 0 10vw;
+    text-align: justify;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1148px) {
+  .main_section_1 {
+    padding: 20px 20px;
+    overflow-y: hidden;
+  }
+
+  .main_section_2 {
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+
+  .main_section_1 p {
+    padding: 0 10vw;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .main_section_2 {
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 15px;
+  }
+
+  .icons_cards {
+    font-size: 30px;
+  }
+  
+  .cards_div h1 {
+    font-size: 16px;
+  }
+  
+  .cards_div p {
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .cards_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    width: 150px;
+    height: 230px;
+    background-color: #222222;
+    border-radius: 8px;
+    resize: none;
+  }
+
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes estica {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 200px;
+    opacity: 1;
+  }
+}
+
+@keyframes diminue {
+  from {
+    width: 200px;
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    opacity: 0;
+  }
+}

@@ -7,11 +7,12 @@ import { MdGroups } from "react-icons/md";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { MdImageSearch } from "react-icons/md";
 
-import '../styles/navbar.css';
+import '../styles/style.components/navbar.css';
 import logo from '../images/Horizontal-Color.png';
 
 function NavBar() {
   const [actvate, setActvate] = useState("0");
+  const [display, setDisplay] = useState("flex")
   const [fade, setFade] = useState("");
   const [xbutton, setXbutton] = useState({
     line1: '',
@@ -23,6 +24,7 @@ function NavBar() {
   useEffect(() => {
     if (size.width > 1148) {
       setActvate('0');
+      setDisplay('flex')
     } else {
       setFade("");
       setActvate("100%");
@@ -43,6 +45,7 @@ function NavBar() {
     };
     if (size.width < 1420) {
       if (actvate === "100%") {
+        setDisplay("flex")
         setFade(animeFade);
         setActvate("0");
         setXbutton({
@@ -70,7 +73,8 @@ function NavBar() {
         <img className="logo_nav" src={ logo } alt="logo" />
       </h1>
       <ul
-        style={{ transform: `translateX(${actvate})`, }}
+        style={{ transform: `translateX(${actvate})`,
+          display: `${display}`, }}
         className="nav_list">
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148

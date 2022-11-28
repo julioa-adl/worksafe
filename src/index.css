@@ -1,14 +1,22 @@
 *, 
-*:after,
-*:before {
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    overflow-x: hidden;
 }
 body{
     font-size: 100%;
     list-style-type: none;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+html {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
 }
 
 body {
