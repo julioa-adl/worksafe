@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&display=swap');
+
 .main {
   overflow-x: hidden;
 }
@@ -49,11 +51,14 @@
 
 .cards_div h1 {
   color: #BEFF25;
+  font-size: 35px;
+  font-weight: 200;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .cards_div p {
   color: white;
-  text-align: justify;
+  text-align: center;
 }
 
 .cards_div {

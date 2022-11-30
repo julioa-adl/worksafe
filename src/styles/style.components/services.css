@@ -1,3 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&display=swap');
+
 .services_container_main {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+  overflow-y: hidden;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.titles {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  font-weight: 200;
+  /* margin-bottom: 50px; */
+}
+
+.line_serv {
+  border: solid 1px #f44336;
+  width: 200px;
+  margin: 20px 0 50px;
+}
+
+.container_serv {
+  display: flex;
+  margin: 0 200px;
+  justify-content: space-between;
+}
+
+.btns_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.btn_services {
+  background-color: #222222;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  font-weight: 700;
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.btn_services:not(:last-child) {
+  border-bottom: solid 2px darkslategrey;
+}
+
+/* .btn_services:first-child {
+  background-color: #f44336;
+} */
+
+.icon_serv {
+  color: white;
+  font-size: 1.5em;
+  opacity: 0.9;
+}
+
+.redBtn {
+  background-color: #f44336;
+}
+
+.container_article_img {
+  display: flex;
+  width: 80%;
+  background-color: #f44336;
+}
+
+.container_article_img article {
+  display: flex;
+  margin: 40px 0 40px 40px;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  width: 50%;
+}
+
+.container_article_img article h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 200;
+  font-size: 28px;
+}
+
+.container_article_img article h1::after {
+  content: ' :';
+}
+
+.container_article_img article p {
+  text-align: justify;
+  line-height: 30px;
+}
+
+.img_serv {
+  width: 50%;
+  height: 70vh;
+  border: solid 40px #f44336;
+  transition-duration: 0.4s;
+  animation: surgir 0.4s ease-in-out;
+  background-position: center;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

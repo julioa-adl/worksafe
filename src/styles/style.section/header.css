@@ -17,11 +17,16 @@
   color: #BEFF25;
 }
 
+.stay_safe {
+  transition: transform 0.3s ease;
+}
+
 .stay_safe_2 {
   opacity: 0.5;
   color: hsla(120, 100%, 50%, 0);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
 }
 
 .stay_safe_3 {
@@ -29,6 +34,7 @@
   color: hsla(120, 100%, 50%, 0);
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
+  transition: transform 0.3s ease;
 }
 
 @media (max-width: 1148px) {

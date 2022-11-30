@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import useWindowSize from '../hooks/useWindowSize';
+import useWindowScroll from '../hooks/useWindowScroll';
 
 import { MdOutlineHome } from "react-icons/md";
 import { MdGroups } from "react-icons/md";
@@ -19,12 +20,40 @@ function NavBar() {
     line2: '',
     line3: '',
   });
+  const [navPosition, setnavPosition] = useState({
+    position: '',
+    top: '',
+    bgColor: '',
+    padding: '',
+    borderR: '',
+    slide: '',
+  });
   const size = useWindowSize();
+  const heigthEl = useWindowScroll();
 
   useEffect(() => {
     if (size.width > 1148) {
       setActvate('0');
-      setDisplay('flex')
+      setDisplay('flex');
+      if (heigthEl > size.height * 0.75) {
+        setnavPosition({
+          position: 'fixed',
+          top: '15px',
+          bgColor: 'rgba(225, 225, 225, 0.2)',
+          padding: '20px',
+          borderR: '10px',
+          slide: 'slideinNav',
+        });
+    } else {
+      setnavPosition({
+        position: '',
+        top: '',
+        bgColor: '',
+        padding: '',
+        borderR: '',
+        slide: '',
+      })
+    };
     } else {
       setFade("");
       setActvate("100%");
@@ -34,7 +63,8 @@ function NavBar() {
         line3: '',
       })
     }
-  }, [size])
+    
+  }, [size, heigthEl])
 
   const mobileNavBar = () => {
     const animeFade = 'navLinkFade 0.5s ease forwards 0.3s';
@@ -68,7 +98,14 @@ function NavBar() {
   };
   
   return (
-    <div className="navbar_container">
+    <div
+      className="navbar_container"
+      style={{ position: `${ navPosition.position }`,
+      top: `${ navPosition.top }`,
+      backgroundColor: `${ navPosition.bgColor }`,
+      padding: `${ navPosition.padding }`,
+      borderRadius: `${ navPosition.borderR }`,
+      animation: `${ navPosition.slide } 2s forwards`}}>
       <h1 className="h1_logo">
         <img className="logo_nav" src={ logo } alt="logo" />
       </h1>
