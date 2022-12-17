@@ -28,11 +28,11 @@ function Services() {
         return;
       };
     } else {
-      if (position < 50) {
+      if (position < 900) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 50) {
+      } if (position > 900) {
         setSlide('slideUp');
         setEstica('estica')
         return;
@@ -43,6 +43,7 @@ function Services() {
   const handleClickServ = ({ target }) => {
     const id = target.id;
     setRenderServ(id);
+    console.log(target)
   };
 
   return (
@@ -72,7 +73,7 @@ function Services() {
                 style={{
                   backgroundColor: `${serv.id === Number(renderServ) ? "#f44336" : ''}`,
                 }}
-              >
+              ><div id={ serv.id } className="div_bt_vazia"/>
                 { serv.icon }
                 { serv.service }
               </button>
@@ -92,6 +93,7 @@ function Services() {
                   style={{
                     background: `url(${thisServ.image})`,
                     backgroundSize: "cover",
+                    backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
                 />

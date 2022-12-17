@@ -84,7 +84,6 @@
     padding: 50px 200px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    row-gap: 20px;
   }
 
   .main_section_1 p {
@@ -107,10 +106,15 @@
     row-gap: 20px;
   }
 
+  .main_section_1 h2 {
+    font-size: 20px;
+  }
+
   .main_section_1 p {
     padding: 0 10vw;
     text-align: center;
     font-size: 16px;
+    text-align: left;
   }
 }
 
@@ -124,16 +128,22 @@
   }
 
   .icons_cards {
-    font-size: 30px;
+    font-size: 25px;
   }
   
   .cards_div h1 {
     font-size: 16px;
+    font-weight: 100;
   }
   
   .cards_div p {
     font-size: 12px;
-    text-align: center;
+    text-align: left;
+    height: 60%;
+  }
+
+  .cards_div p::-webkit-scrollbar {
+    width: 12px;
   }
   
   .cards_div {

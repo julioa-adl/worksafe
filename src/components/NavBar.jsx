@@ -7,6 +7,7 @@ import { MdOutlineHome } from "react-icons/md";
 import { MdGroups } from "react-icons/md";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { MdImageSearch } from "react-icons/md";
+import { AiFillCaretDown } from "react-icons/ai";
 
 import '../styles/style.components/navbar.css';
 import logo from '../images/Horizontal-Color.png';
@@ -28,6 +29,8 @@ function NavBar() {
     borderR: '',
     slide: '',
   });
+  const [dropDown, setDropDown] = useState(false);
+
   const size = useWindowSize();
   const heigthEl = useWindowScroll();
 
@@ -61,6 +64,14 @@ function NavBar() {
         line1: '',
         line2: '',
         line3: '',
+      });
+      setnavPosition({
+        position: '',
+        top: '',
+        bgColor: '',
+        padding: '',
+        borderR: '',
+        slide: '',
       })
     }
     
@@ -96,6 +107,10 @@ function NavBar() {
       };
     }
   };
+
+  const hoverDropDownList = () => {
+    setDropDown(dropDown ? false : true)
+  };
   
   return (
     <div
@@ -130,7 +145,20 @@ function NavBar() {
           ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)
           : ("")
           }
-          <NavLink className="NL" to="/">Serviços</NavLink></li>
+          <NavLink onMouseEnter={ hoverDropDownList } onMouseLeave={ hoverDropDownList } className="nav_service" to="/">
+            <p className="NL">Serviços <AiFillCaretDown/></p>
+            {
+              dropDown ? (
+              <ul className="dropDown_list">
+                <li className="NL">Manutenção</li>
+                <li className="NL">Bombeiro</li>
+                <li className="NL">Resgate</li>
+                <li className="NL">Arborismo</li>
+                <li className="NL">Treinamentos</li>
+              </ul>
+              ) : null
+            }
+          </NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
           ? (<MdImageSearch className="mobile_icons" />)

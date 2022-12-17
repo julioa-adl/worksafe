@@ -38,6 +38,7 @@
 
 .btn_services {
   background-color: #222222;
+  position: relative;
   border: none;
   color: white;
   padding: 12px 24px;
@@ -67,6 +68,14 @@
   color: white;
   font-size: 1.5em;
   opacity: 0.9;
+}
+
+.div_bt_vazia {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
 }
 
 .redBtn {
@@ -101,6 +110,7 @@
 .container_article_img article p {
   text-align: justify;
   line-height: 30px;
+  font-size: 20px;
 }
 
 .img_serv {
@@ -110,6 +120,131 @@
   transition-duration: 0.4s;
   animation: surgir 0.4s ease-in-out;
   background-position: center;
+}
+
+@media (max-width: 1650px) {
+  .btn_services {
+    font-size: 18px;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .icon_serv {
+    font-size: 1.5em;
+    resize: none;
+  }
+
+  .container_article_img article {
+    display: flex;
+    margin: 20px 0 20px 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .container_article_img article h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 100;
+    font-size: 24px;
+  }
+
+  .container_article_img article p {
+    text-align: justify;
+    line-height: 20px;
+    font-size: 18px;
+  }
+
+  .container_article_img p::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .img_serv {
+    width: 50%;
+    height: 60vh;
+    border: solid 20px #f44336;
+  }
+}
+
+@media (max-width: 1240px) {
+  .container_serv {
+    flex-direction: column;
+    margin: 0 20px;
+    align-items: center;
+    height: 80vh;
+    width: 90vw;
+  }
+
+  .btns_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+  }
+
+  .btn_services {
+    flex-direction: column;
+    height: 100%;
+    font-size: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .btn_services:not(:last-child) {
+    border-right: solid 2px darkslategrey;
+    border-bottom: none;
+  }
+
+  .icon_serv {
+    color: white;
+    font-size: 30px;
+    opacity: 0.9;
+  }
+
+  .container_article_img {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+    height: 100%;
+    align-items: center;
+  }
+
+  .container_article_img article {
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+    gap: 10px 0;
+    align-items: center;
+    width: 95%;
+    height: 50%;
+  }
+
+  .container_article_img article h1 {
+    font-size: 20px;
+    padding: 15px 0;
+    overflow-y: hidden;
+    font-size: 18px;
+  }
+
+  .container_article_img article p {
+    overflow-X: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    text-align: justify;
+    font-size: 16px;
+  }
+
+  .img_serv {
+    width: 100%;
+    height: 40%;
+    border: solid 10px #f44336;
+  }
+}
+
+@media (max-width: 600px) {
+  .img_serv {
+    height: 230px;
+  }
 }
 
 @keyframes surgir {
