@@ -4,6 +4,7 @@
 .aboutUs_container_main {
   height: 100vh;
   width: 100vw;
+  padding: 0 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,4 +17,29 @@
   font-weight: 200;
   color: white;
   /* margin-bottom: 50px; */
+}
+
+.historico {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: white;
+  width: 100%;
+}
+
+.historico li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+}
+
+.historico li h1 {
+  margin-right: 15px;
+  font-size: 50px;
+  color: #f44336;
+}
+
+.historico li h3 {
+  width: 100px;
 }

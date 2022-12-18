@@ -16,21 +16,21 @@ function AboutUs() {
 
   useEffect(() => {
     if (size.width > 600) {
-      if (position < 1100) {
+      if (position < 3100) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 1100) {
+      } if (position > 3100) {
         setSlide('slideUp');
         setEstica('estica')
         return;
       };
     } else {
-      if (position < 900) {
+      if (position < 2900) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 900) {
+      } if (position > 2900) {
         setSlide('slideUp');
         setEstica('estica')
         return;
@@ -54,6 +54,24 @@ function AboutUs() {
       <hr
         style={{ animation: `${estica} 2s forwards`, }}
         className="line_serv"/>
+      <ul className="historico">
+          <li>
+            <h1>+400</h1>
+            <h3>Obras Concluídas</h3>
+          </li>
+          <li>
+            <h1>15</h1>
+            <h3>Anos de Experiência</h3>
+          </li>
+          <li>
+            <h1>60</h1>
+            <h3>Profissionais Qualificados</h3>
+          </li>
+          <li>
+            <h1>0</h1>
+            <h3>Acidentes</h3>
+          </li>
+      </ul>
     </section>
   )
 }
