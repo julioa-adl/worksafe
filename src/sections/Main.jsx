@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Services from '../components/Services';
+import Projects from '../components/Projects';
+import AboutUs from '../components/AboutUs';
 
 import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';
@@ -89,6 +91,8 @@ function Main() {
         </div>
       </section>
       <Services />
+      <Projects />
+      <AboutUs />
     </div>
   )
 }
