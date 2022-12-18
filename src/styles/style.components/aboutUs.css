@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&display=swap');
 
-
 .aboutUs_container_main {
   height: 100vh;
   width: 100vw;
-  padding: 0 200px;
+}
+
+.historico_container {
+  height: 50%;
+  width: 100%;
+  padding: 80px 200px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,6 +21,18 @@
   font-weight: 200;
   color: white;
   /* margin-bottom: 50px; */
+}
+
+.line_serv {
+  margin-bottom: 20px;
+}
+
+.about {
+  color: white;
+  padding: 0 230px;
+  margin-bottom: 40px;
+  font-weight: 100;
+  text-align: center;
 }
 
 .historico {
@@ -34,12 +50,83 @@
   margin: 10px;
 }
 
+/* .historico li:not(:first-of-type)::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f44336;
+} */
+
 .historico li h1 {
   margin-right: 15px;
-  font-size: 50px;
-  color: #f44336;
+  font-size: 60px;
+  color: #BEFF25;
 }
 
 .historico li h3 {
   width: 100px;
+  font-family: 'Bebas Neue', cursive, sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.depoiments_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 200px 20px;
+  color: white;
+  width: 100%;
+  height: 40%;
+  /* transition: transform 0.4seg; */
+}
+
+.depoiment {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  background-color: #f44336;
+  padding: 0 50px;
+}
+
+.img_depoiment {
+  width: 50%;
+  height: 100%;
+  transition-duration: 0.4s;
+  animation: surgir 0.4s ease-in-out;
+}
+
+.btn_dep_container {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn_dep {
+  /* width: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: white;
+  border: none;
+  /* padding: 10px 16px; */
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 30px;
+  font-weight: 200;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

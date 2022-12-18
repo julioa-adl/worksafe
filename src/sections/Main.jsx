@@ -54,11 +54,11 @@ function Main() {
         <hr
           style={{ animation: `${estica} 2s forwards`, }}
           className="line"/>
-        <p
+        {/* <p
           style={{ animation: `${slide} 3s forwards`, }}
         >Somos uma empresa especializada em segurança para atividades de alto risco.
         Com equipes qualificadas há mais de 15 anos no mercado prestando atividades  em locais de difícil acesso, altura, espaços confinados e capacitando novos profissionais voltados para a área de segurança do trabalho.
-        </p>
+        </p> */}
       </section>
       <section className="main_section_2">
         <div
