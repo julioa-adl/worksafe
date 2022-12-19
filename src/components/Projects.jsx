@@ -31,11 +31,11 @@ function Projects() {
         return;
       };
     } else {
-      if (position < 1900) {
+      if (position < 1300) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 1900) {
+      } if (position > 1300) {
         setSlide('slideUp');
         setEstica('estica')
         return;
