@@ -157,7 +157,7 @@
 @media (max-width: 900px) {
   .footer_container {
     flex-direction: column;
-    height: 60vh;
+    height: 100vh;
   }
 
   .footer_container div {

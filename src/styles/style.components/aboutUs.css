@@ -170,6 +170,7 @@
     /* overflow-y: scroll; */
     margin: 0 !important;
     padding-right: 20px !important;
+    font-size: 14px;
   }
 
   .titles {
@@ -183,10 +184,11 @@
   }
 
   .img_depoiment {
-    width: 100%;
+    display: none;
+    /* width: 100%;
     background-position: top !important;
     background-repeat: repeat !important;
-    background-size: cover !important;
+    background-size: cover !important; */
   }
 
   .icon_triangle {
