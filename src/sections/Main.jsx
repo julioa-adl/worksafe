@@ -87,7 +87,7 @@ function Main() {
           className="cards_div">
           <BsLightning className="icons_cards" />
           <h1>AGILIDADE</h1>
-          <p>Possuímos um sistemas de acompanhamento diário de obras que são compartihados com nossos clientes através de relatórios de todas as atividades executadas.</p>
+          <p>Possuímos um sistemas de acompanhamento diário de obras que são compartihados com nossos clientes através de relatórios dos serviços.</p>
         </div>
       </section>
       <Services />
