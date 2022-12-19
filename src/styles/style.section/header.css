@@ -3,7 +3,7 @@
 .header_container {
   height: 100vh;
   display: block;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .txt_header_container {

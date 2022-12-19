@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  /* overflow-y: hidden; */
+  /* overflow: hidden; */
   align-items: center;
   justify-content: center;
   color: white;

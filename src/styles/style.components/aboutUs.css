@@ -2,7 +2,8 @@
 
 .aboutUs_container_main {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
 }
 
 .historico_container {
@@ -20,6 +21,7 @@
   font-size: 36px;
   font-weight: 200;
   color: white;
+  text-align: center;
   /* margin-bottom: 50px; */
 }
 
@@ -29,10 +31,11 @@
 
 .about {
   color: white;
-  padding: 0 230px;
+  padding: 0 100px;
   margin-bottom: 40px;
   font-weight: 100;
   text-align: center;
+  overflow: hidden;
 }
 
 .historico {
@@ -73,12 +76,11 @@
 .depoiments_container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 0 200px 20px;
-  color: white;
-  width: 100%;
+  justify-content: center;
+  padding: 0 200px;
+  color: #222222;
+  width: 100vw;
   height: 40%;
-  /* transition: transform 0.4seg; */
 }
 
 .depoiment {
@@ -90,6 +92,22 @@
   row-gap: 10px;
   background-color: #f44336;
   padding: 0 50px;
+  position: relative;
+}
+
+.depoiment h3 {
+  color: white;
+}
+
+.icon_aspas {
+  color: white;
+}
+
+.icon_triangle {
+  position: absolute;
+  font-size: 5em;
+  right: -52px;
+  color: #f44336;
 }
 
 .img_depoiment {
@@ -97,6 +115,7 @@
   height: 100%;
   transition-duration: 0.4s;
   animation: surgir 0.4s ease-in-out;
+  background-position: center !important;
 }
 
 .btn_dep_container {
@@ -121,6 +140,62 @@
   transition-duration: 0.4s;
   cursor: pointer;
 }
+
+@media (max-width: 1400px) {
+  .historico {
+    display: none;
+  }
+}
+
+@media (max-width: 1240px) {
+  .historico_container {
+    padding: 0;
+  }
+
+  .about {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .depoiments_container {
+    padding: 0 20px;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .about {
+    text-align: left;
+    height: 50%;
+    /* overflow-y: scroll; */
+    margin: 0 !important;
+    padding-right: 20px !important;
+  }
+
+  .titles {
+    text-align: center;
+  }
+
+  .depoiment {
+    padding: 10px;
+    font-size: smaller;
+    width: 100%;
+  }
+
+  .img_depoiment {
+    width: 100%;
+    background-position: top !important;
+    background-repeat: repeat !important;
+    background-size: cover !important;
+  }
+
+  .icon_triangle {
+    display: none;
+  }
+
+}
+
+  
 
 @keyframes surgir {
   from {

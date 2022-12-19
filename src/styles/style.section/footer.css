@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&display=swap');
+
+.footer_container {
+  width: 100%;
+  height: 30vh;
+  padding: 0 200px;
+  background-color: #222222;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer_container div {
+  width: 33%;
+}
+
+.resumo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+  height: 100%;
+}
+
+.resumo h1 {
+  color: #f44336;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  font-weight: 200;
+}
+
+.resumo p {
+  width: 60%;
+}
+
+.resumo img {
+  width: 100px;
+}
+
+.links_uteis {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  height: 100% !important;
+}
+
+.links_uteis h1 {
+  color: #f44336;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+.links_uteis ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  justify-content: space-between;
+  height: 80%;
+}
+
+.links_uteis li:hover {
+  color: #BEFF25;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.infos_contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+  height: 100% !important;
+  color: white;
+}
+
+.infos_contato h1 {
+  color: #f44336;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 36px;
+  font-weight: 200;
+  padding-bottom: 10px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+}
+
+.contact_divs {
+  width: 100% !important;
+  margin-left: 10px;
+}
+
+.contact_title {
+  width: 100% !important;
+}
+
+.contact_parag {
+  width: 100% !important;
+}
+
+.icon_contact {
+  font-size: 30px;
+  /* color: #BEFF25 !important; */
+  color: #5e5757 !important;
+}
+
+@media (max-width: 1260px) {
+  .resumo h1 {
+    font-size: 24px;
+  }
+  
+  .resumo p {
+    width: 80%;
+  }
+  
+  .resumo img {
+    width: 80px;
+  }
+
+  .links_uteis h1 {
+    font-size: 24px;
+  }
+
+  .infos_contato h1 {
+    font-size: 24px;
+  }
+
+  .icon_contact {
+    font-size: 20px !important;
+  }
+
+  .contact_title {
+    font-size: 16px;
+  }
+
+  .contact_parag {
+    font-size: 12px;
+  }
+
+  .footer_container {
+    padding: 0 20px;
+  }
+
+}
+
+@media (max-width: 900px) {
+  .footer_container {
+    flex-direction: column;
+    height: 60vh;
+  }
+
+  .footer_container div {
+    width: 100% !important;
+  }
+
+  .resumo, .links_uteis, .infos_contato {
+    padding: 16px 0;
+    gap: 5px;
+  }
+}

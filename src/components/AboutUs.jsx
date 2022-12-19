@@ -11,6 +11,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 import { FaQuoteRight } from "react-icons/fa";
 import { FaRegCaretSquareLeft } from "react-icons/fa";
 import { FaRegCaretSquareRight } from "react-icons/fa";
+import { GoTriangleRight } from "react-icons/go";
 
 import '../styles/style.components/aboutUs.css';
 
@@ -34,11 +35,11 @@ function AboutUs() {
         return;
       };
     } else {
-      if (position < 2900) {
+      if (position < 2500) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 2900) {
+      } if (position > 2500) {
         setSlide('slideUp');
         setEstica('estica')
         return;
@@ -106,9 +107,9 @@ function AboutUs() {
             <div className="depoiments_container">
               <div className="depoiment">
                 <h1>{ fDep.client }</h1>
-                <FaQuoteLeft/>
+                <FaQuoteLeft className='icon_aspas'/>
                 <h3>{ fDep.depoiment }</h3>
-                <FaQuoteRight/>
+                {/* <FaQuoteRight className='icon_aspas'/> */}
                 <div>
                   <span>{ fDep.name }</span>
                   <span> | </span>
@@ -122,6 +123,7 @@ function AboutUs() {
                     onClick={ clickNextDep }
                     className="btn_dep"><FaRegCaretSquareRight/></button>
                 </div>
+                <GoTriangleRight className='icon_triangle'/>
               </div>
               <div
                 className="img_depoiment"
