@@ -87,6 +87,7 @@ function Services() {
                 <article>
                   <h1>{ thisServ.title }</h1>
                   <p>{ thisServ.text }</p>
+                  <span className='continue_text'>...</span>
                 </article>
                 <div
                   className="img_serv"
