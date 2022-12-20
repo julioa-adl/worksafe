@@ -27,6 +27,7 @@
   -webkit-text-stroke-width: 0.8px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
+  font-weight: 500;
 }
 
 .stay_safe_3 {
@@ -35,6 +36,7 @@
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
+  font-weight: 200;
 }
 
 @media (max-width: 1148px) {
