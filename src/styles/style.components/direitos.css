@@ -1,5 +1,5 @@
 .direitos_container {
-  height: 4vh;
+  height: 100%;
   width: 100%;
   background-color: #0e0d0d;
   display: flex;
@@ -7,11 +7,13 @@
   justify-content: center;
   align-items: center;
   color: white;
+  padding: 10px 0;
 }
 
 @media (max-width: 900px) {
   .direitos_container {
     font-size: 12px;
+    font-weight: 200;
     text-align: center;
     height: 6vh;
   }

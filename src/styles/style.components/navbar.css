@@ -32,6 +32,7 @@
   color: #fff;
   transition-duration: 0.3s;
   align-items: center;
+  font-weight: 200;
 }
 
 .NL:hover {

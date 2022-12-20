@@ -24,7 +24,7 @@
 .stay_safe_2 {
   opacity: 0.5;
   color: hsla(120, 100%, 50%, 0);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.8px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
 }
@@ -32,7 +32,7 @@
 .stay_safe_3 {
   opacity: 0.2;
   color: hsla(120, 100%, 50%, 0);
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
 }
