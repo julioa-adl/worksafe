@@ -36,7 +36,7 @@
 
 .NL:hover {
   color: #BEFF25;
-  font-weight: 550;
+  /* font-weight: 550; */
   text-decoration: underline #BEFF25;
 }
 
