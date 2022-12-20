@@ -25,11 +25,11 @@ function AboutUs() {
 
   useEffect(() => {
     if (size.width > 600) {
-      if (position < 3100) {
+      if (position < 2800) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 3100) {
+      } if (position > 2800) {
         setSlide('slideUp');
         setEstica('estica')
         return;
