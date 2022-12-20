@@ -32,6 +32,7 @@
   color: #fff;
   transition-duration: 0.3s;
   align-items: center;
+  font-size: 1em;
   /* font-weight: 400; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -55,8 +56,9 @@
 }
 
 .dropDown_list li {
-  margin-top: 5px;
+  margin-bottom: 5px;
   list-style:georgian;
+  font-size: 1em;
 }
 
 
@@ -69,7 +71,7 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 700;
   transition-duration: 0.4s;
   cursor: pointer;
