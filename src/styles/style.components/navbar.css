@@ -35,6 +35,12 @@
   font-size: 1em;
   font-weight: 100;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-bottom: 5px;
+}
+
+.NL_serv {
+  height: 50px;
+  /* margin-bottom: 10px; */
 }
 
 .NL:hover {
@@ -51,8 +57,12 @@
 }
 
 .dropDown_list {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
   position: absolute;
   top: 20px;
+  background-color: #222222;
 }
 
 .dropDown_list li {

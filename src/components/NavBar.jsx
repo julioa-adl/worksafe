@@ -10,7 +10,8 @@ import { MdImageSearch } from "react-icons/md";
 import { AiFillCaretDown } from "react-icons/ai";
 
 import '../styles/style.components/navbar.css';
-import logo from '../images/Horizontal-Color.png';
+import logo1 from '../images/Horizontal-Color.png';
+import logo2 from '../images/logo branca.png';
 
 function NavBar() {
   const [actvate, setActvate] = useState("0");
@@ -42,7 +43,8 @@ function NavBar() {
         setnavPosition({
           position: 'fixed',
           top: '15px',
-          bgColor: 'rgba(225, 225, 225, 0.2)',
+          // bgColor: 'rgba(225, 225, 225, 0.2)',
+          bgColor: '#222222',
           padding: '20px',
           borderR: '10px',
           slide: 'slideinNav',
@@ -122,7 +124,7 @@ function NavBar() {
       borderRadius: `${ navPosition.borderR }`,
       animation: `${ navPosition.slide } 2s forwards`}}>
       <h1 className="h1_logo">
-        <img className="logo_nav" src={ logo } alt="logo" />
+        <img className="logo_nav" src={ navPosition.position === 'fixed' ? logo2 : logo1 } alt="logo" />
       </h1>
       <ul
         style={{ transform: `translateX(${actvate})`,
@@ -145,8 +147,10 @@ function NavBar() {
           ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)
           : ("")
           }
-          <NavLink onMouseEnter={ hoverDropDownList } onMouseLeave={ hoverDropDownList } className="nav_service" to="/">
-            <p className="NL">Serviços <AiFillCaretDown/></p>
+          <NavLink className="nav_service" to="/">
+            <p
+              onMouseEnter={ hoverDropDownList } onMouseLeave={ hoverDropDownList } 
+              className="NL NL_serv">Serviços <AiFillCaretDown/>
             {
               dropDown ? (
               <ul className="dropDown_list">
@@ -158,6 +162,7 @@ function NavBar() {
               </ul>
               ) : null
             }
+            </p>
           </NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
