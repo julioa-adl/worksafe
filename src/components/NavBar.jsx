@@ -8,10 +8,12 @@ import { MdGroups } from "react-icons/md";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { MdImageSearch } from "react-icons/md";
 import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretUp } from "react-icons/ai";
 
 import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
 import logo2 from '../images/logo branca.png';
+import logo3 from '../images/Vertical-Branca.png';
 
 function NavBar() {
   const [actvate, setActvate] = useState("0");
@@ -130,6 +132,7 @@ function NavBar() {
         style={{ transform: `translateX(${actvate})`,
           display: `${display}`, }}
         className="nav_list">
+        <img className="logo_nav_mobile" src={ logo3 } alt="logo" />
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
           ? (<MdOutlineHome className="mobile_icons" />)
@@ -148,14 +151,14 @@ function NavBar() {
           : ("")
           }
           <NavLink
-              
               className="nav_service" to="/">
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
-              // onPointerLeave={ hoverDropDownList }
-              // onPointerEnter={ hoverDropDownList }
-              className="NL NL_serv">Serviços <AiFillCaretDown/>
+              className="NL NL_serv">Serviços {
+                !dropDown ? <AiFillCaretDown/>
+                : <AiFillCaretUp onClick={() => {setDropDown(false)}}/>
+              }
             {
               dropDown ? (
               <ul className="dropDown_list">
