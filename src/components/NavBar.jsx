@@ -8,7 +8,8 @@ import { MdGroups } from "react-icons/md";
 import { MdOutlineMiscellaneousServices } from "react-icons/md";
 import { MdImageSearch } from "react-icons/md";
 import { AiFillCaretDown } from "react-icons/ai";
-import { AiFillCaretUp } from "react-icons/ai";
+// import { AiFillCaretUp } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
@@ -156,8 +157,9 @@ function NavBar() {
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
               className="NL NL_serv">Serviços {
-                !dropDown ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
-                : <AiFillCaretUp onClick={() => {setDropDown(false)}}/>
+                !dropDown
+                ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
+                : <AiOutlineClose onClick={() => {setDropDown(false)}}/>
               }
             {
               dropDown ? (
