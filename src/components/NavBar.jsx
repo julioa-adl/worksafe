@@ -147,9 +147,13 @@ function NavBar() {
           ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)
           : ("")
           }
-          <NavLink className="nav_service" to="/">
+          <NavLink
+            className="nav_service" to="/">
             <p
-              onMouseEnter={ hoverDropDownList } onMouseLeave={ hoverDropDownList } 
+              onMouseEnter={ hoverDropDownList }
+              onMouseLeave={ hoverDropDownList }
+              onClick={ hoverDropDownList }
+              // onPointerLeave={ hoverDropDownList }
               className="NL NL_serv">Serviços <AiFillCaretDown/>
             {
               dropDown ? (
