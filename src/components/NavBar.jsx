@@ -156,7 +156,7 @@ function NavBar() {
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
               className="NL NL_serv">Serviços {
-                !dropDown ? <AiFillCaretDown/>
+                !dropDown ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
                 : <AiFillCaretUp onClick={() => {setDropDown(false)}}/>
               }
             {
