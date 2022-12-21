@@ -148,12 +148,13 @@ function NavBar() {
           : ("")
           }
           <NavLink
-            className="nav_service" to="/">
+              
+              className="nav_service" to="/">
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
-              onClick={ hoverDropDownList }
-              // onPointerLeave={ hoverDropDownList }
+              onPointerLeave={ hoverDropDownList }
+              onPointerEnter={ hoverDropDownList }
               className="NL NL_serv">Serviços <AiFillCaretDown/>
             {
               dropDown ? (
