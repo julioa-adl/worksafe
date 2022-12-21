@@ -153,8 +153,8 @@ function NavBar() {
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
-              onPointerLeave={ hoverDropDownList }
-              onPointerEnter={ hoverDropDownList }
+              // onPointerLeave={ hoverDropDownList }
+              // onPointerEnter={ hoverDropDownList }
               className="NL NL_serv">Serviços <AiFillCaretDown/>
             {
               dropDown ? (
