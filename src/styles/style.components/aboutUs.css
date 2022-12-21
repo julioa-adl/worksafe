@@ -123,6 +123,8 @@
 .btn_dep_container {
   display: flex;
   flex-direction: row;
+  position: absolute;
+  bottom: 10px;
 }
 
 .btn_dep {
@@ -157,6 +159,11 @@
   .about {
     padding: 0 20px;
   }
+
+  .btn_dep_container {
+    left: 0;
+    bottom: -45px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -177,6 +184,7 @@
 
   .titles {
     text-align: center;
+    padding: 0 20px;
   }
 
   .depoiment {

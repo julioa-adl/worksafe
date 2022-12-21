@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   overflow: hidden;
 }
 
@@ -31,6 +31,7 @@
   font-family: 'Bebas Neue', cursive;
   font-size: 36px;
   font-weight: 200;
+  padding-bottom: 15px;
 }
 
 .resumo p {
@@ -54,22 +55,23 @@
   font-family: 'Bebas Neue', cursive;
   font-size: 36px;
   font-weight: 200;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .links_uteis ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  /* gap: 10px; */
+  gap: 10px;
   justify-content: space-between;
   height: 80%;
 }
 
-.links_uteis li:hover {
+.links_uteis li span:hover {
   color: #BEFF25;
   text-decoration: underline;
   cursor: pointer;
+  width: 50%;
 }
 
 .infos_contato {
@@ -79,6 +81,7 @@
   padding: 50px 0;
   height: 100% !important;
   color: white;
+  gap: 10px;
 }
 
 .infos_contato h1 {
@@ -95,6 +98,14 @@
   justify-content: center;
   align-items: center;
   width: 100% !important;
+}
+
+.contacts h3 {
+  font-size: 1em;
+}
+
+.contacts p {
+  font-size: 1em;
 }
 
 .contact_divs {
@@ -114,6 +125,10 @@
   font-size: 30px;
   /* color: #BEFF25 !important; */
   color: #5e5757 !important;
+}
+
+.conect_footer {
+  width: 100% !important;
 }
 
 @media (max-width: 1260px) {
@@ -158,7 +173,7 @@
 @media (max-width: 900px) {
   .footer_container {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
   }
 
   .footer_container div {
@@ -166,7 +181,7 @@
   }
 
   .resumo, .links_uteis, .infos_contato {
-    padding: 16px 0;
-    gap: 5px;
+    gap: 10px;
+    justify-content: center;
   }
 }

@@ -9,9 +9,9 @@
     text-decoration: none;
 }
 body{
-    /* font-size: 100%; */
+    font-size: 100%;
     /* list-style-type: none; */
-    /* max-width: 100vw !important; */
+    max-width: 100vw !important;
     background-color: #222222;
     font-weight: 200;
     font-family: 'Ubuntu', sans-serif;

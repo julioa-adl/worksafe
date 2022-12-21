@@ -6,6 +6,10 @@ import { BsPinMap } from "react-icons/bs";
 import { BsEnvelopeOpen } from "react-icons/bs";
 import { BsTelephone } from "react-icons/bs";
 
+import { BsFacebook } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { BsLinkedin } from "react-icons/bs";
+
 import '../styles/style.section/footer.css';
 
 function Footer() {
@@ -19,11 +23,11 @@ function Footer() {
       <div className="links_uteis">
         <h1>LINKS ÚTEIS</h1>
         <ul>
-          <li>Manutenção Industrial</li>
-          <li>Gestão de Riscos</li>
-          <li>Bombeiro Civil</li>
-          <li>Limpeza de Silos</li>
-          <li>Treinamentos</li>
+          <li><span>Manutenção Industrial</span></li>
+          <li><span>Gestão de Riscos</span></li>
+          <li><span>Bombeiro Civil</span></li>
+          <li><span>Limpeza de Silos</span></li>
+          <li><span>Treinamentos</span></li>
         </ul>
       </div>
       <div className="infos_contato">
@@ -48,6 +52,12 @@ function Footer() {
             <h3 className="contact_title">Fale Conosco</h3>
             <p className="contact_parag">(81) 3264-1592</p>
           </div>
+        </div>
+        <div className='conect_footer'>
+          <span className="span_topbar" >Conecte-se Conosco</span>
+          <a target="blank" href="https://www.facebook.com/worksafeserv/"><BsFacebook className="social_icon" /></a>
+          <a target="blank" href="https://www.instagram.com/worksafe_brasil/"><BsInstagram className="social_icon" /></a>
+          <a target="blank" href="https://www.linkedin.com/company/worksafeservicos/"><BsLinkedin className="social_icon" /></a>
         </div>
       </div>
     </div>

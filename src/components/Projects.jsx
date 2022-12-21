@@ -6,6 +6,7 @@ import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';
 
 import { BsFilterCircle } from "react-icons/bs";
+import { BsXCircle } from "react-icons/bs";
 
 import '../styles/style.components/projects.css';
 
@@ -21,11 +22,11 @@ function Projects() {
     // console.log(position)
     if (size.width > 900) {
       setSeeMore('block');
-      if (position < 2000) {
+      if (position < 1800) {
         setSlide('slideDown')
         setEstica('diminue')
         return;
-      } if (position > 2000) {
+      } if (position > 1800) {
         setSlide('slideUp');
         setEstica('estica')
         return;
@@ -88,7 +89,8 @@ function Projects() {
             <button
               className="btn_seeMore"
               onClick={ ExpandseeMore }
-            >{seeMore === 'none'? 'Ver Mais' : 'Ver Menos'} <BsFilterCircle/></button>
+            >{seeMore === 'none'? 'Ver Mais' : 'Ver Menos'}
+            {seeMore === 'none'? <BsFilterCircle className='open_icon'/> : <BsXCircle className='close_icon'/>} </button>
           )
           : null
         }
