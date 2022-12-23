@@ -16,7 +16,7 @@ const services = [
     icon: <VscTools className="icon_serv"/>,
     service: 'Manutenção',
     title: 'Equipes especializadas para atendimentos 24h',
-    text: 'A manutenção industrial, também chamada de manutenção da planta, é o processo de implementação de processos para reduzir avarias, aumentar o tempo de atividade e promover a confiabilidade geral. Em outras palavras, a manutenção é o processo geral de garantir que os ativos sejam mantidos em boas condições de funcionamento.',
+    text: 'Realizamos processos de manutenção industrial que inclui: Manutenção, instalação, substituições, impermeabilização de telhados de diversos tipos e seus componentes.',
     image: manutencao,
   },
   {
@@ -32,7 +32,7 @@ const services = [
     icon: <GiMountainClimbing className="icon_serv"/>,
     service: 'Difícil Acesso',
     title: 'Chegamos onde você precisa!',
-    text: 'As áreas onde não é possível montar andaimes são instaladas, reparadas, mantidas e inspecionadas por nossa experiente equipe de escalada industrial. Ao treinar nossos funcionários para o nível 3 da FISAT, todas as aplicações são possíveis. O treinamento contínuo do pessoal garante o mais alto nível de segurança ocupacional para nossa equipe.',
+    text: 'As áreas onde não é possível montar andaimes, onde os riscos envolvidos são grandes, são nossa especialidade. Trabalhamos de forma contínua na qualificação de nossos profissionais. Temos equipes qualificadas para Acesso por Corda e até conquista de vias de acesso de acordo com a necessidade do cliente.',
     image: difAcesso,
   },
   {

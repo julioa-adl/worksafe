@@ -1,0 +1,30 @@
+
+
+@media (max-width: 900px) {
+  .historico_about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .historico_about li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .historico_about li h1 {
+    font-size: 1.5em !important;
+    width: 50%;
+    text-align: right;
+    margin-left: 0;
+  }
+  
+  .historico_about li h3 {
+    font-size: 1em !important;
+    width: 50%;
+    text-align: left;
+  }
+}

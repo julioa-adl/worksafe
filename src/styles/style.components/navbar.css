@@ -8,11 +8,20 @@
   padding: 24px 0;
   right: 0;
   left: 0;
-  z-index: 10;
+  z-index: 12;
+}
+
+.h1_logo {
+  z-index: 120;
+}
+
+.a_logo_link {
+  z-index: 120;
 }
 
 .logo_nav {
   width: 200px;
+  z-index: 120;
 }
 
 .logo_nav_mobile {

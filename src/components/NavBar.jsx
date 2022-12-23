@@ -127,7 +127,9 @@ function NavBar() {
       borderRadius: `${ navPosition.borderR }`,
       animation: `${ navPosition.slide } 2s forwards`}}>
       <h1 className="h1_logo">
-        <img className="logo_nav" src={ navPosition.position === 'fixed' ? logo2 : logo1 } alt="logo" />
+        <a href='#header' className='a_logo_link'>
+          <img className="logo_nav" src={ navPosition.position === 'fixed' ? logo2 : logo1 } alt="logo" />
+        </a>
       </h1>
       <ul
         style={{ transform: `translateX(${actvate})`,
@@ -145,7 +147,7 @@ function NavBar() {
           ? (<MdGroups className="mobile_icons" />)
           : ("")
           }
-          <NavLink className="NL" to="/">Sobre Nós</NavLink></li>
+          <NavLink className="NL" to="/sobre">Sobre Nós</NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
           ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)

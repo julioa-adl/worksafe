@@ -32,7 +32,7 @@ function Header() {
   }, [position, size]);
 
   return (
-    <header className="header_container"
+    <header id='header' className="header_container"
     style={{
       background: `url(${industria_img})`,
       backgroundPosition: "center",
