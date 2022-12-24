@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Services from '../components/Services';
 import Projects from '../components/Projects';
 import AboutUs from '../components/AboutUs';
@@ -13,42 +13,33 @@ import { BsGear } from "react-icons/bs";
 import { BsStar } from "react-icons/bs";
 import { BsLightning } from "react-icons/bs";
 
-
 function Main() {
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
+
+  const ref = useRef(null);
 
   const size = useWindowSize();
   const position = useWindowScroll();
 
   useEffect(() => {
-    if (size.width > 600) {
-      if (position < 200) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 150) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      setEstica('diminue')
+      return;
     } else {
-      if (position < 10) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 11) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };
+      setSlide('slideUp');
+      setEstica('estica')
+      return;
+    }  
   }, [position, size]);
 
   return (
     <div className="main">
       <section className="main_section_1">
-        <h2 
+        <h2
+          ref={ ref }
           style={{ animation: `${slide} 2s forwards`, }}
         >NÃO VENDEMOS SEGURANÇA, NÓS A PRATICAMOS!</h2>
         <hr

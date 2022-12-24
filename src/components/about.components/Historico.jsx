@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+
+import useWindowSize from '../../hooks/useWindowSize';
+import useWindowScroll from '../../hooks/useWindowScroll';
+import useInterval from '../../hooks/useInterval';
 
 import equipe from '../../images/equipe.png';
 
-import depoiments from '../../utils/object.depoiment';
+import gestores from '../../utils/object.gestores';
 
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaIndent } from "react-icons/fa";
 import { FaRegCaretSquareLeft } from "react-icons/fa";
 import { FaRegCaretSquareRight } from "react-icons/fa";
 import { GoTriangleRight } from "react-icons/go";
@@ -13,18 +17,49 @@ import '../../styles/style.components/historico.css';
 
 function Historico() {
   const [nextDep, setNextDep] = useState(0);
+  const [slide, setSlide] = useState('slideUp');
+  const [estica, setEstica] = useState('estica');
+
+  const ref = useRef(null);
+
+  const size = useWindowSize();
+  const position = useWindowScroll();
+
+  useEffect(() => {
+    const interval = setInterval(_ => {
+      if (nextDep === gestores.length - 1) {
+        setNextDep(0);
+      } else {
+        setNextDep(nextDep + 1);
+      }
+    }, 5000);
+    return _ => clearInterval(interval);
+  });
+
+  useEffect(() => {
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      setEstica('diminue')
+      return;
+    } else {
+      setSlide('slideUp');
+      setEstica('estica')
+      return;
+    }
+  }, [position, size]);
 
   const clickNextDep = () => {
-    if (nextDep === depoiments.length - 1) {
-      setNextDep(0);
+    if (nextDep === gestores.length - 1) {
+    setNextDep(0);
     } else {
-      setNextDep(nextDep + 1);
+    setNextDep(nextDep + 1);
     };
   };
 
   const clickPrevtDep = () => {
     if (nextDep === 0) {
-      setNextDep(depoiments.length - 1);
+      setNextDep(gestores.length - 1);
     } else {
       setNextDep(nextDep - 1);
     };
@@ -32,18 +67,22 @@ function Historico() {
 
   return (
     <section
-    className="aboutUs_container_main"  
-    style={{
-      background: `url(${equipe})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-    }}
+      ref={ ref }
+      className="aboutUs_container_main"  
+      style={{
+        background: `url(${equipe})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="historico_container">
+      <div className="historico_container funcionarios_container">
         <h2
+          style={{ animation: `${slide} 2s forwards`, }}
           className="titles">Não Terceirize Problemas, Contrate Soluções!</h2>
-        <hr className="line_serv"/>
+        <hr
+          style={{ animation: `${estica} 2s forwards`, }}
+          className="line_serv"/>
         {/* <h3 className="about">Somos uma empresa especializada em segurança para atividades de alto risco. Com equipes qualificadas há mais de 15 anos no mercado prestando atividades em locais de difícil acesso, altura, espaços confinados e capacitando novos profissionais voltados para a área de segurança do trabalho.
         Atuamos no mercado Industrial com especialização em ZERO acidentes, estatística para a qual voltamos nossa proficiência e damos a força de nosso nome.</h3> */}
         <ul className="historico historico_about">
@@ -66,18 +105,18 @@ function Historico() {
         </ul>
       </div>
       {
-        depoiments.filter((dep) => dep.id === nextDep)
-          .map((fDep) => (
-            <div className="depoiments_container">
+        gestores.filter((gest) => gest.id === nextDep)
+          .map((fGest) => (
+            <div className="depoiments_container depoiment_funcionarios">
               <div className="depoiment">
-                <h1>{ fDep.client }</h1>
-                <FaQuoteLeft className='icon_aspas'/>
-                <h3>{ fDep.depoiment }</h3>
+                <h1>{ fGest.name }</h1>
+                <FaIndent className='icon_aspas'/>
+                <h3>{ fGest.curriculo }</h3>
                 {/* <FaQuoteRight className='icon_aspas'/> */}
                 <div>
-                  <span>{ fDep.name }</span>
+                  <span>{ fGest.cargo }</span>
                   <span> | </span>
-                  <span>{ fDep.cargo }</span>
+                  <span>{ fGest.zona }</span>
                 </div>
                 <div className="btn_dep_container">
                   <button
@@ -90,12 +129,12 @@ function Historico() {
                 <GoTriangleRight className='icon_triangle'/>
               </div>
               <div
-                className="img_depoiment"
+                className="img_depoiment img_funcionarios"
                 style={{
-                  background: `url(${fDep.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                  background: `url(${fGest.image})`,
+                  // backgroundSize: "cover",
+                  // backgroundPosition: "center",
+                  // backgroundRepeat: "no-repeat",
                 }}
               />
             </div>

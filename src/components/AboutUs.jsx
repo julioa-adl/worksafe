@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import equipe from '../images/equipe.png';
 
@@ -8,7 +8,7 @@ import useWindowScroll from '../hooks/useWindowScroll';
 import depoiments from '../utils/object.depoiment';
 
 import { FaQuoteLeft } from "react-icons/fa";
-import { FaQuoteRight } from "react-icons/fa";
+// import { FaQuoteRight } from "react-icons/fa";
 import { FaRegCaretSquareLeft } from "react-icons/fa";
 import { FaRegCaretSquareRight } from "react-icons/fa";
 import { GoTriangleRight } from "react-icons/go";
@@ -20,31 +20,33 @@ function AboutUs() {
   const [estica, setEstica] = useState('estica');
   const [nextDep, setNextDep] = useState(0);
 
+  const ref = useRef(null);
+
   const size = useWindowSize();
   const position = useWindowScroll();
 
   useEffect(() => {
-    if (size.width > 600) {
-      if (position < 2800) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 2800) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
+    const interval = setInterval(_ => {
+      if (nextDep === depoiments.length - 1) {
+        setNextDep(0);
+      } else {
+        setNextDep(nextDep + 1);
+      }
+    }, 5000);
+    return _ => clearInterval(interval);
+  });
+
+  useEffect(() => {
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      setEstica('diminue')
+      return;
     } else {
-      if (position < 2500) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 2500) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };    
+      setSlide('slideUp');
+      setEstica('estica')
+      return;
+    }  
   }, [position, size]);
 
   const clickNextDep = () => {
@@ -75,6 +77,7 @@ function AboutUs() {
     >
       <div className="historico_container">
         <h2
+          ref={ ref }
           style={{ animation: `${slide} 2s forwards`, }}
           className="titles">Não Terceirize Problemas, Contrate Soluções!</h2>
         <hr

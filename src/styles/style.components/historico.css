@@ -1,6 +1,27 @@
-
+.img_funcionarios {
+  display: block !important;
+  width: 40% !important;
+  /* background-repeat: repeat !important; */
+  background-size: cover !important;
+}
 
 @media (max-width: 900px) {
+  .funcionarios_container {
+    height: 40% !important;
+  }
+
+  .depoiment_funcionarios {
+    height: 50% !important;
+    margin-bottom: 40px;
+  }
+
+  .img_funcionarios {
+    display: block !important;
+    width: 100% !important;
+    /* background-repeat: repeat !important; */
+    background-size: cover !important;
+  }
+
   .historico_about {
     display: grid;
     grid-template-columns: 1fr 1fr;

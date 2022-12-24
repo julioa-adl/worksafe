@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import useWindowSize from '../../hooks/useWindowSize';
 import useWindowScroll from '../../hooks/useWindowScroll';
@@ -9,37 +9,29 @@ import { FiStar } from "react-icons/fi";
 
 function Mission() {
   const [slide, setSlide] = useState('slideUp');
-  const [estica, setEstica] = useState('estica');
+
+  const ref = useRef(null);
 
   const size = useWindowSize();
   const position = useWindowScroll();
 
   useEffect(() => {
-    if (size.width > 600) {
-      if (position < 200) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 150) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
+    const altura = ref.current.getBoundingClientRect().top;
+    // console.log(size.height + 'tela')
+    // console.log(altura + 'altura')
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      return;
     } else {
-      if (position < 10) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 11) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };
+      setSlide('slideUp');
+      return;
+    }   
   }, [position, size]);
 
   return (
-    <section className="main_section_2">
+    <section 
+      ref={ ref }
+      className="main_section_2">
         <div
           style={{ animation: `${slide} 2.5s forwards`, }}
           className="cards_div">

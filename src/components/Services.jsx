@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import alpinists from '../images/alpinists.png';
 import services from '../utils/object.services';
@@ -13,31 +13,22 @@ function Services() {
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
 
+  const ref = useRef(null);
+
   const size = useWindowSize();
   const position = useWindowScroll();
 
   useEffect(() => {
-    if (size.width > 600) {
-      if (position < 1100) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 1100) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      setEstica('diminue')
+      return;
     } else {
-      if (position < 900) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 900) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };    
+      setSlide('slideUp');
+      setEstica('estica')
+      return;
+    }  
   }, [position, size]);
 
   const handleClickServ = ({ target }) => {
@@ -56,6 +47,7 @@ function Services() {
       backgroundRepeat: "no-repeat",
     }}>
       <h2
+        ref={ ref }
         style={{ animation: `${slide} 2s forwards`, }}
         className="titles">Serviços</h2>
       <hr

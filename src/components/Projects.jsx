@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 import projects from '../utils/object.projects';
 
@@ -15,33 +15,22 @@ function Projects() {
   const [estica, setEstica] = useState('estica');
   const [seeMore, setSeeMore] = useState('none');
 
+  const ref = useRef(null);
+
   const size = useWindowSize();
   const position = useWindowScroll();
 
   useEffect(() => {
-    // console.log(position)
-    if (size.width > 900) {
-      setSeeMore('block');
-      if (position < 1800) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 1800) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
+    const altura = ref.current.getBoundingClientRect().top;
+    if (altura > size.height * 0.75) {
+      setSlide('slideDown')
+      setEstica('diminue')
+      return;
     } else {
-      if (position < 1300) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 1300) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };    
+      setSlide('slideUp');
+      setEstica('estica')
+      return;
+    }   
   }, [position, size]);
 
   const ExpandseeMore = () => {
@@ -55,6 +44,7 @@ function Projects() {
   return (
     <section className="projects_container_main">
       <h2
+        ref={ ref }
         style={{ animation: `${slide} 2s forwards`, }}
         className="titles">Projetos</h2>
       <hr
