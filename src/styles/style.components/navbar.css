@@ -60,6 +60,7 @@
   color: #BEFF25;
   /* font-weight: 550; */
   text-decoration: underline #BEFF25;
+  cursor: pointer;
 }
 
 .nav_service {

@@ -32,6 +32,7 @@ function HeaderAbout() {
 
   return (
     <div
+      id='header'
       className="header_container"
       style={{
         background: `url(${industria_img})`,
