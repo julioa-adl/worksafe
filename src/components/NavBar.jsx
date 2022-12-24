@@ -153,8 +153,8 @@ function NavBar() {
           ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)
           : ("")
           }
-          <NavLink
-              className="nav_service" to="/">
+          <div
+              className="nav_service" >
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
@@ -176,7 +176,7 @@ function NavBar() {
               ) : null
             }
             </p>
-          </NavLink></li>
+          </div></li>
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
           ? (<MdImageSearch className="mobile_icons" />)
