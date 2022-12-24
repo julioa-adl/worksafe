@@ -142,19 +142,20 @@
 
   .nav_list {
     position: fixed;
-    top: 12vh;
+    top: 0vh;
     right: 0;
     width: 50vw;
-    height: 88vh;
+    height: 100vh;
     background: #23232e;
+    opacity: 0.98;
     flex-direction: column;
     align-items: flex-start;
     justify-content: top;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
-    z-index: 10;
+    z-index: 1000;
     gap: 10px;
-    padding-top: 40px;
+    padding-top: 120px;
   }
 
   .NL_serv {
@@ -218,8 +219,15 @@
     color: white;
   }
 
+  .NL_serv span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .mobile_menu {
     display: block;
+    z-index: 1001;
   }
 
   .mobile_icons {

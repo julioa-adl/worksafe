@@ -135,7 +135,7 @@ function NavBar() {
         style={{ transform: `translateX(${actvate})`,
           display: `${display}`, }}
         className="nav_list">
-        <img className="logo_nav_mobile" src={ logo3 } alt="logo" />
+        {/* <img className="logo_nav_mobile" src={ logo3 } alt="logo" /> */}
         <li style={{ animation: `${ fade }`, }}>
           { size.width < 1148
           ? (<MdOutlineHome className="mobile_icons" />)
@@ -158,11 +158,12 @@ function NavBar() {
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
-              className="NL NL_serv">Serviços {
+              className="NL NL_serv"><span>Serviços {
                 !dropDown
                 ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
                 : <AiOutlineClose onClick={() => {setDropDown(false)}}/>
               }
+              </span>
             {
               dropDown ? (
               <ul className="dropDown_list">
