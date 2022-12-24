@@ -21,14 +21,17 @@ function Projects() {
   const position = useWindowScroll();
 
   useEffect(() => {
+    if (size.width > 900) {
+      setSeeMore('block');
+    }
     const altura = ref.current.getBoundingClientRect().top;
     if (altura > size.height * 0.75) {
-      setSlide('slideDown')
-      setEstica('diminue')
+      setSlide('slideDown');
+      setEstica('diminue');
       return;
     } else {
       setSlide('slideUp');
-      setEstica('estica')
+      setEstica('estica');
       return;
     }   
   }, [position, size]);

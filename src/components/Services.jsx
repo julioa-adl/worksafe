@@ -9,7 +9,7 @@ import useWindowScroll from '../hooks/useWindowScroll';
 import '../styles/style.components/services.css';
 
 function Services() {
-  const [renderServ, setRenderServ] = useState(0);
+  const [renderServ, setRenderServ] = useState(2);
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
 
@@ -79,6 +79,13 @@ function Services() {
                 <article>
                   <h1>{ thisServ.title }</h1>
                   <p>{ thisServ.text }</p>
+                  <ul>
+                    {
+                      thisServ.listServ.map((servIten) => (
+                        <li>{ servIten }</li>
+                      ))
+                    }
+                  </ul>
                   <span className='continue_text'>...</span>
                 </article>
                 <div

@@ -19,7 +19,7 @@ function AboutUs() {
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
   const [nextDep, setNextDep] = useState(0);
-  const [renderTimer, setRenderTimer] = useState(false);
+  const [renderTimer, setRenderTimer] = useState(true);
 
   const ref = useRef(null);
 
@@ -59,6 +59,7 @@ function AboutUs() {
     } else {
       setNextDep(nextDep + 1);
     };
+    setRenderTimer(false)
   };
 
   const clickPrevtDep = () => {
@@ -67,6 +68,7 @@ function AboutUs() {
     } else {
       setNextDep(nextDep - 1);
     };
+    setRenderTimer(false)
   };
 
   return (

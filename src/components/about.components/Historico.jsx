@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 
 import useWindowSize from '../../hooks/useWindowSize';
 import useWindowScroll from '../../hooks/useWindowScroll';
-import useInterval from '../../hooks/useInterval';
+// import useInterval from '../../hooks/useInterval';
 
 import equipe from '../../images/equipe.png';
 
 import gestores from '../../utils/object.gestores';
 
-import { FaIndent } from "react-icons/fa";
+import { FaRegListAlt } from "react-icons/fa";
 import { FaRegCaretSquareLeft } from "react-icons/fa";
 import { FaRegCaretSquareRight } from "react-icons/fa";
 import { GoTriangleRight } from "react-icons/go";
@@ -59,6 +59,7 @@ function Historico() {
     } else {
     setNextDep(nextDep + 1);
     };
+    setRenderTimer(false)
   };
 
   const clickPrevtDep = () => {
@@ -67,6 +68,7 @@ function Historico() {
     } else {
       setNextDep(nextDep - 1);
     };
+    setRenderTimer(false)
   };
 
   return (
@@ -119,7 +121,7 @@ function Historico() {
                   ) : null
                 }
                 <h1>{ fGest.name }</h1>
-                <FaIndent className='icon_aspas'/>
+                <span><FaRegListAlt className='icon_aspas'/> Currículo</span>
                 <h3>{ fGest.curriculo }</h3>
                 {/* <FaQuoteRight className='icon_aspas'/> */}
                 <div>
