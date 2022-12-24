@@ -19,6 +19,7 @@ function AboutUs() {
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
   const [nextDep, setNextDep] = useState(0);
+  const [renderTimer, setRenderTimer] = useState(false);
 
   const ref = useRef(null);
 
@@ -29,14 +30,17 @@ function AboutUs() {
     const interval = setInterval(_ => {
       if (nextDep === depoiments.length - 1) {
         setNextDep(0);
+        setRenderTimer(false)
       } else {
         setNextDep(nextDep + 1);
+        setRenderTimer(false)
       }
     }, 5000);
     return _ => clearInterval(interval);
   });
 
   useEffect(() => {
+    setRenderTimer(true);
     const altura = ref.current.getBoundingClientRect().top;
     if (altura > size.height * 0.75) {
       setSlide('slideDown')
@@ -47,7 +51,7 @@ function AboutUs() {
       setEstica('estica')
       return;
     }  
-  }, [position, size]);
+  }, [position, size, renderTimer]);
 
   const clickNextDep = () => {
     if (nextDep === depoiments.length - 1) {
@@ -109,6 +113,11 @@ function AboutUs() {
           .map((fDep) => (
             <div className="depoiments_container">
               <div className="depoiment">
+                {
+                  renderTimer ? (
+                    <hr className='timer'/>
+                  ) : null
+                }
                 <h1>{ fDep.client }</h1>
                 <FaQuoteLeft className='icon_aspas'/>
                 <h3>{ fDep.depoiment }</h3>
@@ -132,9 +141,9 @@ function AboutUs() {
                 className="img_depoiment"
                 style={{
                   background: `url(${fDep.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
+                  // backgroundSize: "cover",
+                  // backgroundPosition: "center",
+                  // backgroundRepeat: "no-repeat",
                 }}
               />
             </div>

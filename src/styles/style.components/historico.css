@@ -20,6 +20,7 @@
     width: 100% !important;
     /* background-repeat: repeat !important; */
     background-size: cover !important;
+    filter: brightness(0.8) contrast(1.2);
   }
 
   .historico_about {

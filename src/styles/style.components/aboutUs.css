@@ -97,6 +97,16 @@
   position: relative;
 }
 
+.timer {
+  width: 1%;
+  border: solid 2px #BEFF25;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-duration: 5s;
+  animation: timer 5s ease-in-out;
+}
+
 .depoiment h3 {
   color: white;
   font-size: 1em;
@@ -275,7 +285,14 @@
 
 }
 
-  
+@keyframes timer {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
 @keyframes surgir {
   from {

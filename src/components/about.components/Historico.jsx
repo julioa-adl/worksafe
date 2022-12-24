@@ -19,6 +19,7 @@ function Historico() {
   const [nextDep, setNextDep] = useState(0);
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
+  const [renderTimer, setRenderTimer] = useState(false);
 
   const ref = useRef(null);
 
@@ -29,14 +30,17 @@ function Historico() {
     const interval = setInterval(_ => {
       if (nextDep === gestores.length - 1) {
         setNextDep(0);
+        setRenderTimer(false)
       } else {
         setNextDep(nextDep + 1);
+        setRenderTimer(false)
       }
     }, 5000);
     return _ => clearInterval(interval);
   });
 
   useEffect(() => {
+    setRenderTimer(true);
     const altura = ref.current.getBoundingClientRect().top;
     if (altura > size.height * 0.75) {
       setSlide('slideDown')
@@ -47,7 +51,7 @@ function Historico() {
       setEstica('estica')
       return;
     }
-  }, [position, size]);
+  }, [position, size, renderTimer]);
 
   const clickNextDep = () => {
     if (nextDep === gestores.length - 1) {
@@ -109,6 +113,11 @@ function Historico() {
           .map((fGest) => (
             <div className="depoiments_container depoiment_funcionarios">
               <div className="depoiment">
+              {
+                  renderTimer ? (
+                    <hr className='timer'/>
+                  ) : null
+                }
                 <h1>{ fGest.name }</h1>
                 <FaIndent className='icon_aspas'/>
                 <h3>{ fGest.curriculo }</h3>
