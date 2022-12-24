@@ -46,9 +46,10 @@
     height: 100%;
   }
 
-  /* .about_div_txt {
-    margin-bottom: 20px;
-  } */
+  .about_div_txt p {
+    text-align: left !important;
+    padding-top: 10px !important;
+  }
 
   .odenis {
     margin: 20px 0;

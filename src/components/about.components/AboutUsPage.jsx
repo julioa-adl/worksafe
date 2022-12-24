@@ -45,7 +45,7 @@ function AboutUsPage() {
           <h1>QUEM SOMOS:</h1>
           <p
             // style={{ animation: `${slide} 3s forwards`, }}
-          >Somos uma empresa especializada em segurança para atividades de alto risco.<br/>
+          >Somos uma empresa especializada em segurança para atividades de alto risco!<br/>
           Fundada pelo nosso Diretor e CEO <span style={{color: "#BEFF25"}}>Odenis Mesquita</span> com sua vasta experiência de projetos anteriores na área de segurança, mas agora com maior foco e direcionamento as nossas missões, visões e valores.</p>
 
           <p>
