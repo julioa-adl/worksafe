@@ -3,18 +3,12 @@ import { NavLink } from 'react-router-dom';
 import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';
 
-import { MdOutlineHome } from "react-icons/md";
-import { MdGroups } from "react-icons/md";
-import { MdOutlineMiscellaneousServices } from "react-icons/md";
-import { MdImageSearch } from "react-icons/md";
 import { AiFillCaretDown } from "react-icons/ai";
-// import { AiFillCaretUp } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
 import logo2 from '../images/logo branca.png';
-import logo3 from '../images/Vertical-Branca.png';
 
 function NavBar() {
   const [actvate, setActvate] = useState("0");
@@ -137,51 +131,40 @@ function NavBar() {
         className="nav_list">
         {/* <img className="logo_nav_mobile" src={ logo3 } alt="logo" /> */}
         <li style={{ animation: `${ fade }`, }}>
-          { size.width < 1148
-          ? (<MdOutlineHome className="mobile_icons" />)
-          : ("")
-          }
           <NavLink className="NL" to="/">Home</NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
-          { size.width < 1148
-          ? (<MdGroups className="mobile_icons" />)
-          : ("")
-          }
           <NavLink className="NL" to="/sobre">Sobre Nós</NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
-          { size.width < 1148
-          ? (<MdOutlineMiscellaneousServices className="mobile_icons" />)
-          : ("")
-          }
           <div
               className="nav_service" >
             <p
               onMouseEnter={ hoverDropDownList }
               onMouseLeave={ hoverDropDownList }
-              className="NL NL_serv"><span>Serviços {
-                !dropDown
-                ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
-                : <AiOutlineClose onClick={() => {setDropDown(false)}}/>
+              className="NL NL_serv">
+                <div className="NL_serv_div">
+                  <span>Serviços</span>
+                  <div>
+                    {
+                      !dropDown
+                      ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
+                      : <AiOutlineClose onClick={() => {setDropDown(false)}}/>
+                    }
+                  </div> 
+                </div>
+              {
+                dropDown ? (
+                <ul className="dropDown_list">
+                  <li className="NL">Manutenção</li>
+                  <li className="NL">Bombeiro</li>
+                  <li className="NL">Resgate</li>
+                  <li className="NL">Arborismo</li>
+                  <li className="NL">Treinamentos</li>
+                </ul>
+                ) : null
               }
-              </span>
-            {
-              dropDown ? (
-              <ul className="dropDown_list">
-                <li className="NL">Manutenção</li>
-                <li className="NL">Bombeiro</li>
-                <li className="NL">Resgate</li>
-                <li className="NL">Arborismo</li>
-                <li className="NL">Treinamentos</li>
-              </ul>
-              ) : null
-            }
             </p>
           </div></li>
         <li style={{ animation: `${ fade }`, }}>
-          { size.width < 1148
-          ? (<MdImageSearch className="mobile_icons" />)
-          : ("")
-          }
           <NavLink className="NL" to="/">Portifólio</NavLink></li>
       </ul>
       <button className="bttn_fale" type="click">Fale Conosco</button>

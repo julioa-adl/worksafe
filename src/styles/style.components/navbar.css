@@ -56,11 +56,20 @@
   /* margin-bottom: 10px; */
 }
 
-.NL:hover {
+.NL:not(.NL_serv):hover {
   color: #BEFF25;
-  /* font-weight: 550; */
   text-decoration: underline #BEFF25;
   cursor: pointer;
+}
+
+.NL_serv span:hover {
+  color: #BEFF25;
+  text-decoration: underline #BEFF25;
+  cursor: pointer;
+}
+
+.NL_serv_div {
+  display: flex;
 }
 
 .nav_service {
