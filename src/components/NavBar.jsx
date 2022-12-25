@@ -107,8 +107,12 @@ function NavBar() {
     }
   };
 
-  const hoverDropDownList = () => {
-    setDropDown(dropDown ? false : true)
+  const hoverDropEnter = () => {
+    setDropDown(true)
+  };
+
+  const hoverDropOut = () => {
+    setDropDown(false)
   };
   
   return (
@@ -138,31 +142,37 @@ function NavBar() {
           <div
               className="nav_service" >
             <p
-              onMouseEnter={ hoverDropDownList }
-              onMouseLeave={ hoverDropDownList }
+              onMouseEnter={ hoverDropEnter }
+              onMouseLeave={ hoverDropOut }
               className="NL NL_serv">
                 <div className="NL_serv_div">
-                  <span>Serviços</span>
-                  <div>
+                  <span>
+                    Serviços
+                  </span>
+                {
+                  dropDown ? (
+                  <ul className="dropDown_list">
+                    <li className="NL">Manutenção</li>
+                    <li className="NL">Bombeiro</li>
+                    <li className="NL">Resgate</li>
+                    <li className="NL">Arborismo</li>
+                    <li className="NL">Treinamentos</li>
+                  </ul>
+                  ) : null
+                }
+                </div>
+            </p>
+                <div>
                     {
                       !dropDown
-                      ? <AiFillCaretDown onClick={() => {setDropDown(true)}}/>
-                      : <AiOutlineClose onClick={() => {setDropDown(false)}}/>
+                      ? <AiFillCaretDown
+                        className='icon_serv_nav'
+                        onClick={() => {setDropDown(true)}}/>
+                      : <AiOutlineClose
+                        className='icon_serv_nav'
+                        onClick={() => {setDropDown(false)}}/>
                     }
                   </div> 
-                </div>
-              {
-                dropDown ? (
-                <ul className="dropDown_list">
-                  <li className="NL">Manutenção</li>
-                  <li className="NL">Bombeiro</li>
-                  <li className="NL">Resgate</li>
-                  <li className="NL">Arborismo</li>
-                  <li className="NL">Treinamentos</li>
-                </ul>
-                ) : null
-              }
-            </p>
           </div></li>
         <li style={{ animation: `${ fade }`, }}>
           <NavLink className="NL" to="/">Portifólio</NavLink></li>

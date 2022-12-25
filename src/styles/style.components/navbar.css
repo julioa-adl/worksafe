@@ -51,9 +51,16 @@
   padding-bottom: 5px;
 }
 
+.nav_service {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  overflow: visible;
+}
+
 .NL_serv {
   height: 50px;
-  /* margin-bottom: 10px; */
 }
 
 .NL:not(.NL_serv):hover {
@@ -73,17 +80,15 @@
   align-items: center;
 }
 
-.NL_serv_div div {
-  display: flex;
+.icon_serv_nav {
+  color: white;
   margin-left: 5px;
-  align-items: center;
+  font-size: 1em;
 }
 
-.nav_service {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  overflow: visible;
+.icon_serv_nav:hover {
+  color: #BEFF25;
+  cursor: pointer;
 }
 
 .dropDown_list {
@@ -150,13 +155,6 @@
     padding: 24px 0;
   }
 
-  .logo_nav_mobile {
-    display: block;
-    width: 100px;
-    padding-bottom: 10px;
-    margin-left: 40px !important;
-  }
-
   .nav_list {
     position: fixed;
     top: 0vh;
@@ -210,9 +208,15 @@
 
   .nav_service {
     display: flex;
-    position: unset;
-    flex-direction: column;
+    position: relative;
+    align-items: left;
     justify-content: flex-start;
+  }
+
+  .icon_serv_nav {
+    position: absolute;
+    top: 0;
+    left: 60px;
   }
   
   .dropDown_list {
@@ -238,8 +242,15 @@
 
   .NL_serv span {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
+    width: 100%;
+  }
+
+  .NL_serv_div {
+    width: 100%;
+    flex-direction: column;
+    align-content: left;
   }
 
   .mobile_menu {
@@ -247,12 +258,6 @@
     z-index: 1001;
   }
 
-  .mobile_icons {
-    font-size: 48px;
-    color: #BEFF25;
-    margin-bottom: 5px;
-    display: none;
-  }
 }
 
 @media (max-width: 900px) {
