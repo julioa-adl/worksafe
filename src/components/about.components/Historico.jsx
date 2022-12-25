@@ -19,7 +19,7 @@ function Historico() {
   const [nextDep, setNextDep] = useState(0);
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
-  const [renderTimer, setRenderTimer] = useState(false);
+  const [renderTimer, setRenderTimer] = useState(true);
 
   const ref = useRef(null);
 
@@ -89,8 +89,6 @@ function Historico() {
         <hr
           style={{ animation: `${estica} 2s forwards`, }}
           className="line_serv"/>
-        {/* <h3 className="about">Somos uma empresa especializada em segurança para atividades de alto risco. Com equipes qualificadas há mais de 15 anos no mercado prestando atividades em locais de difícil acesso, altura, espaços confinados e capacitando novos profissionais voltados para a área de segurança do trabalho.
-        Atuamos no mercado Industrial com especialização em ZERO acidentes, estatística para a qual voltamos nossa proficiência e damos a força de nosso nome.</h3> */}
         <ul className="historico historico_about">
             <li>
               <h1>+400</h1>
@@ -121,7 +119,7 @@ function Historico() {
                   ) : null
                 }
                 <h1>{ fGest.name }</h1>
-                <span><FaRegListAlt className='icon_aspas'/> Currículo</span>
+                <span><FaRegListAlt className='icon_aspas'/> Proficiência</span>
                 <h3>{ fGest.curriculo }</h3>
                 {/* <FaQuoteRight className='icon_aspas'/> */}
                 <div>

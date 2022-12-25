@@ -1,43 +1,10 @@
-import React, { useEffect, useState } from 'react';
-
-import useWindowSize from '../../hooks/useWindowSize';
-import useWindowScroll from '../../hooks/useWindowScroll';
+import React from 'react';
 
 import odenis from '../../images/odenis.png'
 
 import '../../styles/style.components/aboutUsPages.css';
 
 function AboutUsPage() {
-  const [slide, setSlide] = useState('slideUp');
-  const [estica, setEstica] = useState('estica');
-
-  const size = useWindowSize();
-  const position = useWindowScroll();
-
-  useEffect(() => {
-    if (size.width > 600) {
-      if (position < 200) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 150) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    } else {
-      if (position < 10) {
-        setSlide('slideDown')
-        setEstica('diminue')
-        return;
-      } if (position > 11) {
-        setSlide('slideUp');
-        setEstica('estica')
-        return;
-      };
-    };
-  }, [position, size]);
-
   return (
     <div>
       <section className="main_section_1 about_main">
