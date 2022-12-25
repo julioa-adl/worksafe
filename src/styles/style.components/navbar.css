@@ -70,6 +70,13 @@
 
 .NL_serv_div {
   display: flex;
+  align-items: center;
+}
+
+.NL_serv_div div {
+  display: flex;
+  margin-left: 5px;
+  align-items: center;
 }
 
 .nav_service {
