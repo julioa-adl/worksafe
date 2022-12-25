@@ -100,6 +100,7 @@
 .timer {
   width: 1%;
   border: solid 2px #BEFF25;
+  background-color: #BEFF25;
   position: absolute;
   top: 0;
   left: 0;
