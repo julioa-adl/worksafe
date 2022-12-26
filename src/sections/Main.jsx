@@ -57,7 +57,7 @@ function Main() {
           className="cards_div">
           <BsShieldCheck className="icons_cards" />
           <h1>SEGURANÇA</h1>
-          <p>Com zero acidentes em nossa história, sempre seguimos com a segurança em primeiro lugar, senda a marca que carregamos em nosso nome.</p>
+          <p>Com zero acidentes em nossa história, sempre seguimos com a segurança em primeiro lugar, sendo a marca que carregamos em nosso nome.</p>
         </div>
         <div
           style={{ animation: `${slide} 2.5s forwards`, }}
