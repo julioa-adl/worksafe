@@ -157,8 +157,8 @@
 
   .nav_list {
     position: fixed;
-    top: 0vh;
-    right: 0;
+    top: -15px;
+    right: -20px;
     width: 50vw;
     height: 100vh;
     background: #23232e;

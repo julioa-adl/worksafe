@@ -36,16 +36,53 @@ function NavBar() {
     if (size.width > 1148) {
       setActvate('0');
       setDisplay('flex');
-      if (heigthEl > size.height * 0.75) {
-        setnavPosition({
-          position: 'fixed',
-          top: '15px',
-          // bgColor: 'rgba(225, 225, 225, 0.2)',
-          bgColor: '#222222',
-          padding: '20px',
-          borderR: '10px',
-          slide: 'slideinNav',
-        });
+      // if (heigthEl > size.height * 0.75) {
+      //   setnavPosition({
+      //     position: 'fixed',
+      //     top: '15px',
+      //     // bgColor: 'rgba(225, 225, 225, 0.2)',
+      //     bgColor: '#222222',
+      //     padding: '20px',
+      //     borderR: '10px',
+      //     slide: 'slideinNav',
+      //   });
+      // } else {
+      //   setnavPosition({
+      //     position: '',
+      //     top: '',
+      //     bgColor: '',
+      //     padding: '',
+      //     borderR: '',
+      //     slide: '',
+      //   })
+      // };
+    } else {
+      setFade("");
+      setActvate("100%");
+      setXbutton({
+        line1: '',
+        line2: '',
+        line3: '',
+      });
+      // setnavPosition({
+      //   position: '',
+      //   top: '',
+      //   bgColor: '',
+      //   padding: '',
+      //   borderR: '',
+      //   slide: '',
+      // })
+    }
+    if (heigthEl > size.height * 0.75) {
+      setnavPosition({
+        position: 'fixed',
+        top: '15px',
+        // bgColor: 'rgba(225, 225, 225, 0.2)',
+        bgColor: '#222222',
+        padding: '20px',
+        borderR: '10px',
+        slide: 'slideinNav',
+      });
     } else {
       setnavPosition({
         position: '',
@@ -56,23 +93,6 @@ function NavBar() {
         slide: '',
       })
     };
-    } else {
-      setFade("");
-      setActvate("100%");
-      setXbutton({
-        line1: '',
-        line2: '',
-        line3: '',
-      });
-      setnavPosition({
-        position: '',
-        top: '',
-        bgColor: '',
-        padding: '',
-        borderR: '',
-        slide: '',
-      })
-    }
     
   }, [size, heigthEl])
 
