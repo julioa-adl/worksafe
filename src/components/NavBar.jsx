@@ -6,6 +6,12 @@ import useWindowScroll from '../hooks/useWindowScroll';
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
+import { FaCog } from "react-icons/fa";
+import { FaFireExtinguisher } from "react-icons/fa";
+import { FaHandHoldingMedical } from "react-icons/fa";
+import { FaTree } from "react-icons/fa";
+import { FaHardHat } from "react-icons/fa";
+
 import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
 import logo2 from '../images/logo branca.png';
@@ -36,26 +42,6 @@ function NavBar() {
     if (size.width > 1148) {
       setActvate('0');
       setDisplay('flex');
-      // if (heigthEl > size.height * 0.75) {
-      //   setnavPosition({
-      //     position: 'fixed',
-      //     top: '15px',
-      //     // bgColor: 'rgba(225, 225, 225, 0.2)',
-      //     bgColor: '#222222',
-      //     padding: '20px',
-      //     borderR: '10px',
-      //     slide: 'slideinNav',
-      //   });
-      // } else {
-      //   setnavPosition({
-      //     position: '',
-      //     top: '',
-      //     bgColor: '',
-      //     padding: '',
-      //     borderR: '',
-      //     slide: '',
-      //   })
-      // };
     } else {
       setFade("");
       setActvate("100%");
@@ -64,20 +50,11 @@ function NavBar() {
         line2: '',
         line3: '',
       });
-      // setnavPosition({
-      //   position: '',
-      //   top: '',
-      //   bgColor: '',
-      //   padding: '',
-      //   borderR: '',
-      //   slide: '',
-      // })
     }
     if (heigthEl > size.height * 0.75) {
       setnavPosition({
         position: 'fixed',
         top: '15px',
-        // bgColor: 'rgba(225, 225, 225, 0.2)',
         bgColor: '#222222',
         padding: '20px',
         borderR: '10px',
@@ -172,11 +149,11 @@ function NavBar() {
                 {
                   dropDown ? (
                   <ul className="dropDown_list">
-                    <li className="NL">Manutenção</li>
-                    <li className="NL">Bombeiro</li>
-                    <li className="NL">Resgate</li>
-                    <li className="NL">Arborismo</li>
-                    <li className="NL">Treinamentos</li>
+                    <li className="NL"><FaCog/> Manutenção</li>
+                    <li className="NL"><FaFireExtinguisher/> Bombeiro</li>
+                    <li className="NL"><FaHandHoldingMedical/> Resgate</li>
+                    <li className="NL"><FaTree/> Arboricultura</li>
+                    <li className="NL"><FaHardHat/> Treinamentos</li>
                   </ul>
                   ) : null
                 }
