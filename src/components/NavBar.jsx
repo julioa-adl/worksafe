@@ -174,7 +174,9 @@ function NavBar() {
         <li style={{ animation: `${ fade }`, }}>
           <NavLink className="NL" to="/">Portifólio</NavLink></li>
       </ul>
-      <button className="bttn_fale" type="click">Fale Conosco</button>
+      <NavLink to="/cote-agora">
+        <button className="bttn_fale" type="click">Cote Agora!</button>
+      </NavLink>
       <div onClick={ mobileNavBar } className="mobile_menu">
         <div style={{ transform: `${ xbutton.line1 }`, }} className="line1"></div>
         <div style={{ opacity: `${ xbutton.line2 }`, }} className="line2"></div>

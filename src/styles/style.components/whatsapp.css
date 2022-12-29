@@ -13,6 +13,12 @@
   backface-visibility: hidden;
   perspective: 1000px;
   animation-iteration-count: 4;
+  transition-duration: 0.4s;
+  opacity: 0.5;
+}
+
+.wpp_icon:hover, .wpp_icon:active {
+  opacity: 1;
 }
 
 @media (max-width: 1240px) {
@@ -20,7 +26,6 @@
     font-size: 2em;
     bottom: 35px;
     right: 10px;
-    opacity: 0.5;
   }
 }
 
@@ -28,6 +33,9 @@
   .whatsapp {
     font-size: 1.5em;
     bottom: 40px;
+  }
+
+  .wpp_icon {
     opacity: 0.2;
   }
 }
