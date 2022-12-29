@@ -173,6 +173,8 @@ function NavBar() {
           </div></li>
         <li style={{ animation: `${ fade }`, }}>
           <NavLink className="NL" to="/">Portifólio</NavLink></li>
+        <li style={{ animation: `${ fade }`, }}>
+          <NavLink className="NL cote_agr" to="/cote-agora">Cote Agora!</NavLink></li>
       </ul>
       <NavLink to="/cote-agora">
         <button className="bttn_fale" type="click">Cote Agora!</button>
