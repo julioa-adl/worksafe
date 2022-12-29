@@ -7,6 +7,7 @@ import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
 import industria_img from '../../images/header.png';
+import bg_aboutUs from '../../images/bg-aboutUs.png';
 
 function HeaderAbout() {
   const [slide, setSlide] = useState('slideout');
@@ -35,11 +36,11 @@ function HeaderAbout() {
       id='header'
       className="header_container"
       style={{
-        background: `url(${industria_img})`,
-        backgroundPosition: "center",
+        background: `url(${bg_aboutUs})`,
+        backgroundPosition: "top",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "70vh"
+        height: "60vh"
       }}
     >
       <TopBar/>
