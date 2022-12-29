@@ -7,7 +7,7 @@ const gestores = [
   {
     id: 0,
     image: gestor1,
-    curriculo: 'Téc. Segurança do trabalho, Alpinista Industrial, Especialista em Resgate e Primeiros Socorros, Empresário e Fundador da WorkSafe Brasil.',
+    curriculo: 'Técnico em segurança do trabalho, pioneiro em atividades de risco no estado de Pernambuco, Irata nível 2, especialista em resgate em altura e espaço confinado, instrutor convidado do grupo de salvamento aéreo da Aeronáutica, CEO da Work Safe.',
     name: 'Odenis Mesquita',
     cargo: 'CEO & DIRETOR OPERACIONAL',
     zona: '',
