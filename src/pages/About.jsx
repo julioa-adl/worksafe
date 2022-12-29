@@ -7,6 +7,7 @@ import Historico from '../components/about.components/Historico';
 import Mission from '../components/about.components/Mission';
 import Footer from '../sections/Footer';
 import Direitos from '../components/Direitos';
+import Whatsapp from '../components/Whatsapp';
 
 function About() {
   return (
@@ -17,6 +18,7 @@ function About() {
       <Historico/>
       <Footer/>
       <Direitos/>
+      <Whatsapp/>
     </div>
   )
 }
