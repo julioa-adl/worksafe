@@ -33,14 +33,14 @@ function HeaderAbout() {
   return (
     <div
       id='header'
-      className="header_container"
+      className="header_container header_orc"
       style={{
         // backgroundColor: '#4e7da6',
         background: `url(${bgHeader_img})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "50vh"
+        height: "60vh"
       }}
     >
       <TopBar/>
@@ -49,6 +49,12 @@ function HeaderAbout() {
         <h1
           style={{ animation: `${slide} 2s forwards`, }}
           className="stay_safe stay_anime">SOLICITE UM <span className="safe">ORÇAMENTO</span></h1>
+        <h1
+        style={{ animation: `${slide} 2.5s forwards`, }}
+        className="stay_safe_2 stay_anime">SOLICITE UM <span className="safe_2">ORÇAMENTO</span></h1>
+        <h1
+        style={{ animation: `${slide} 3s forwards`, }}
+        className="stay_safe_3 stay_anime">SOLICITE UM <span className="safe_3">ORÇAMENTO</span></h1>
       </div>
     </div>
   )

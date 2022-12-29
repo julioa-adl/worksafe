@@ -114,4 +114,8 @@
   .wpp_icon {
     opacity: 0.2;
   }
+
+  .header_orc {
+    background-position: right !important;
+  }
 }
