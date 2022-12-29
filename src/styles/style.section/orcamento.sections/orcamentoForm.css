@@ -98,6 +98,10 @@
 }
 
 @media (max-width: 600px) {
+  .div_container_form h1 {
+    font-size: 2em;
+  }
+
   .img_orc {
     display: none;
   }

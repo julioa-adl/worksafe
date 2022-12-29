@@ -81,7 +81,7 @@ function OrcamentoForm() {
         </label>
 
         <label>
-          Cliente:
+          *Cliente:
           <input
             onChange={ handleChange }
             id="cliente"
@@ -119,7 +119,7 @@ function OrcamentoForm() {
         </label>
 
         <label>
-          Detalhes:
+          *Detalhes:
           <textarea
             onChange={ handleChange }
             id="detalhes"
