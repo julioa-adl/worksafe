@@ -23,7 +23,7 @@ const gestores = [
   {
     id: 2,
     image: gestor3,
-    curriculo: 'Alpinista Industrial, Resgatista, Socorrista, Supervisor de Entrada de Espaços Confinados.',
+    curriculo: 'Técnico em Montagem, Alpinista Industrial, N2 de Acesso por Corda, Resgatista, Socorrista, Supervisor de Entrada de Espaços Confinados.',
     name: 'João Bezerra',
     cargo: 'GERENTE OPERACIONAL',
     zona: '',
