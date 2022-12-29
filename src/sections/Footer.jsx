@@ -50,7 +50,7 @@ function Footer() {
           <BsTelephone className="icon_contact"/>
           <div className="contact_divs">
             <h3 className="contact_title">Fale Conosco</h3>
-            <p className="contact_parag">(81) 3264-1592</p>
+            <p className="contact_parag">(81) 4042-3097</p>
           </div>
         </div>
         <div className='conect_footer'>
