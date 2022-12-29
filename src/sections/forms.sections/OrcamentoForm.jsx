@@ -17,10 +17,12 @@ function OrcamentoForm() {
 
   useEffect(() => {
     const emailRegex = /\S+@\S+\.\S+/;
+    const phineRegex = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
 
     const {name, cliente, email, contato, detalhes } = formInputs;
     if (!name || !cliente || !email || !contato || !detalhes
-      || !emailRegex.test(email)) {
+      || !emailRegex.test(email)
+      || !phineRegex.test(contato)) {
       setDisable(true);
     } else {
       setDisable(false);
@@ -111,7 +113,7 @@ function OrcamentoForm() {
             onChange={ handleChange }
             id="contato"
             type="text"
-            placeholder="Telefone de Contato"
+            placeholder="xx 9xxxx-xxxx"
             className="input_form_orc"
             value={formInputs.contato}
             required
