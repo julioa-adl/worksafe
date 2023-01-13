@@ -51,10 +51,10 @@ function HeaderAbout() {
           className="stay_safe stay_anime quem_about">QUEM <span className="safe">SOMOS</span></h1>
         <h1
         style={{ animation: `${slide} 2.5s forwards`, }}
-        className="stay_safe_2 stay_anime">QUEM <span className="safe_2">SOMOS</span></h1>
+        className="stay_safe_2 stay_anime white_color_font">QUEM <span className="safe_2 white_color_font">SOMOS</span></h1>
         <h1
         style={{ animation: `${slide} 3s forwards`, }}
-        className="stay_safe_3 stay_anime">QUEM <span className="safe_3">SOMOS</span></h1>
+        className="stay_safe_3 stay_anime white_color_font">QUEM <span className="safe_3 white_color_font">SOMOS</span></h1>
       </div>
     </div>
   )

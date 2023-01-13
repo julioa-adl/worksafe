@@ -19,6 +19,10 @@
   color: white;
 }
 
+.white_color_font {
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
 .about_main div h1 {
   font-family: 'Bebas Neue', cursive;
   font-weight: 100;
