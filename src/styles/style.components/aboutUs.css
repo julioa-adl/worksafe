@@ -2,8 +2,9 @@
 
 .aboutUs_container_main {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
+  min-height: 800px;
 }
 
 .historico_container {
@@ -32,7 +33,7 @@
 .about {
   color: white;
   padding: 0 100px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   font-weight: 100;
   text-align: center;
   /* overflow-x: hidden; */
@@ -44,7 +45,7 @@
   justify-content: space-evenly;
   color: white;
   width: 100%;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .historico li {
@@ -90,7 +91,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 60px 60px !important;
+  padding: 20px !important;
   row-gap: 5px;
   background-color: #f44336;
   padding: 10px 50px;
@@ -98,14 +99,14 @@
 }
 
 .timer {
-  width: 1%;
+  /* width: 1%; */
   border: solid 2px #BEFF25;
   background-color: #BEFF25;
   position: absolute;
   top: 0;
   left: 0;
-  transition-duration: 5s;
-  animation: timer 5s ease-in-out;
+  /* transition-duration: 5s; */
+  /* animation: timer 5s ease-in-out; */
 }
 
 .depoiment h3 {
@@ -136,7 +137,8 @@
   display: flex;
   flex-direction: row;
   position: absolute;
-  bottom: 10px;
+  bottom: -40px;
+  left: -8px;
 }
 
 .btn_dep {
@@ -168,7 +170,8 @@
 
   .btn_dep_container {
     left: 0;
-    bottom: -45px;
+    bottom: -40px;
+    left: -8px;
   }
 }
 

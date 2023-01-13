@@ -19,39 +19,61 @@ function Historico() {
   const [nextDep, setNextDep] = useState(0);
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
+  const [widthTimer, setWidth] = useState(1);
   const [renderTimer, setRenderTimer] = useState(true);
 
   const ref = useRef(null);
 
   const size = useWindowSize();
   const position = useWindowScroll();
+  const timing = 10000;
+  
+  const timingFunction = (count) => {
+    const implement = (wid, t) => {
+      setTimeout(() => {
+        setWidth(wid);
+      }, t / 100);
+    };
+
+    for (let i = 1; i <= 100; i += 1) {
+      implement(i, count);
+    }
+    setWidth(1);
+  }
+  
 
   useEffect(() => {
     const interval = setInterval(_ => {
       if (nextDep === gestores.length - 1) {
         setNextDep(0);
-        setRenderTimer(false)
+        timingFunction(timing);
+        setRenderTimer(false);
       } else {
-        setNextDep(nextDep + 1);
-        setRenderTimer(false)
+        setNextDep((prev) => prev += 1);
+        timingFunction(timing);
+        setRenderTimer(false);
       }
-    }, 5000);
+    }, timing);
     return _ => clearInterval(interval);
   });
 
   useEffect(() => {
-    setRenderTimer(true);
     const altura = ref.current.getBoundingClientRect().top;
     if (altura > size.height * 0.75) {
-      setSlide('slideDown')
-      setEstica('diminue')
+      setSlide('slideDown');
+      setEstica('diminue');
       return;
     } else {
       setSlide('slideUp');
-      setEstica('estica')
+      setEstica('estica');
       return;
     }
-  }, [position, size, renderTimer]);
+  }, [position, size]);
+
+  useEffect(() => {
+    timingFunction(timing);
+    setRenderTimer(true);
+  }, [renderTimer])
 
   const clickNextDep = () => {
     if (nextDep === gestores.length - 1) {
@@ -59,7 +81,8 @@ function Historico() {
     } else {
     setNextDep(nextDep + 1);
     };
-    setRenderTimer(false)
+    setRenderTimer(false);
+    setWidth(1);
   };
 
   const clickPrevtDep = () => {
@@ -68,8 +91,13 @@ function Historico() {
     } else {
       setNextDep(nextDep - 1);
     };
-    setRenderTimer(false)
+    setRenderTimer(false);
+    setWidth(1);
   };
+
+  // const hover = () => {
+  //   window.clearInterval();
+  // }
 
   return (
     <section
@@ -111,13 +139,22 @@ function Historico() {
       {
         gestores.filter((gest) => gest.id === nextDep)
           .map((fGest) => (
-            <div className="depoiments_container depoiment_funcionarios">
+            <div
+              className="depoiments_container depoiment_funcionarios"
+              // onMouseDown={ hover }
+            >
               <div className="depoiment">
               {
                   renderTimer ? (
-                    <hr className='timer'/>
-                  ) : null
-                }
+                <hr 
+                  style={{
+                    width: `${widthTimer}%`,
+                    transitionDuration: `${timing / 1000}s`
+                  }}
+                  className='timer'
+                />
+                ) : null
+              }
                 <h1>{ fGest.name }</h1>
                 <span><FaRegListAlt className='icon_aspas'/> Proficiência</span>
                 <h3>{ fGest.curriculo }</h3>
