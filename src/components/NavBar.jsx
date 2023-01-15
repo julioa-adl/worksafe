@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom';
 import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';
 
+import {
+  servicesDetails,
+} from '../utils/object.services.details';
+
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -143,17 +147,20 @@ function NavBar() {
               onMouseLeave={ hoverDropOut }
               className="NL NL_serv">
                 <div className="NL_serv_div">
-                  <span>
+                  <NavLink className="NL" to="/servicos">
                     Serviços
-                  </span>
+                  </NavLink>
                 {
                   dropDown ? (
                   <ul className="dropDown_list">
-                    <li className="NL"><FaCog/> Manutenção</li>
-                    <li className="NL"><FaFireExtinguisher/> Bombeiro</li>
-                    <li className="NL"><FaHandHoldingMedical/> Resgate</li>
-                    <li className="NL"><FaTree/> Arboricultura</li>
-                    <li className="NL"><FaHardHat/> Treinamentos</li>
+                    {
+                      servicesDetails.map((servs) => (
+                        <li className="NL">
+                          { servs.icon }
+                          { servs.service }
+                        </li>
+                      ))
+                    }
                   </ul>
                   ) : null
                 }

@@ -36,7 +36,7 @@ const services = [
     title: 'Chegamos onde você precisa!',
     text: 'As áreas onde não é possível montar andaimes, onde os riscos envolvidos são grandes, são nossa especialidade. Trabalhamos de forma contínua na qualificação de nossos profissionais. Temos equipes qualificadas para Acesso por Corda e até conquista de vias de acesso de acordo com a necessidade do cliente.',
     image: difAcesso,
-    listServ: [],
+    listServ: ['Acesso por Corda', 'Alpinismo Industrial', 'Conquista de Vias', 'Serviços de Plano Inclinado', 'Acessos Limitados', 'Atividades em Espaços Confinados', 'Áreas de Risco'],
   },
   {
     id: 3,

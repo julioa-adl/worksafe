@@ -33,7 +33,7 @@ const gestores = [
     image: gestor4,
     curriculo: 'Téc. Segurança do trabalho, Socorrista, Supervisor de Entrada de Espaços Confinados, Bombeiro Profissional Civil.',
     name: 'Osnar Lucas',
-    cargo: 'SUPERVISOR ADMINISTRATIVO',
+    cargo: 'RESPONSÁVEL TÉC. SEGURANÇA DO TRABALHO',
     zona: '',
   },
 ];
