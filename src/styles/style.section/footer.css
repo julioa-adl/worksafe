@@ -67,7 +67,11 @@
   height: 80%;
 }
 
-.links_uteis li span:hover {
+.links_uteis_links {
+  color: white;
+}
+
+.links_uteis_links:hover {
   color: #BEFF25;
   text-decoration: underline;
   cursor: pointer;

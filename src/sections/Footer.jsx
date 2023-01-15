@@ -28,12 +28,13 @@ function Footer() {
         <ul>
         {
           servicesDetails.map((servs) => (
-            <NavLink
-              to={ `/servicos/${servs.pathName}` }>
-              <li className="NL">
-                { servs.service }
-              </li>
-            </NavLink>
+            <li>
+              <span>
+                <NavLink  className="links_uteis_links" to={ `/servicos/${servs.pathName}` }>
+                  { servs.service }
+                </NavLink>
+              </span>
+            </li>
           ))
         }
         </ul>
