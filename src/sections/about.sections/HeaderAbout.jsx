@@ -6,7 +6,6 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-import industria_img from '../../images/header.png';
 import bg_aboutUs from '../../images/bg-aboutUs.png';
 
 function HeaderAbout() {
@@ -44,7 +43,7 @@ function HeaderAbout() {
       }}
     >
       <TopBar/>
-      <NavBar/>
+      <NavBar propBgColor={'#222222'} logo={'white'}/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}

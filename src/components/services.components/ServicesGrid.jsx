@@ -1,46 +1,17 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import {
-  servicesDetails,
-} from '../../utils/object.services.details';
-
-import useWindowSize from '../../hooks/useWindowSize';
-import useWindowScroll from '../../hooks/useWindowScroll';
+import servicesDetails from '../../utils/object.services.details';
 
 import '../../styles/style.section/services.sections/servicesGrid.css';
 
 function ServicesGrid() {
-  const [slide, setSlide] = useState('slideUp');
-  const [estica, setEstica] = useState('estica');
-
-  const ref = useRef(null);
-
-  const size = useWindowSize();
-  const position = useWindowScroll();
-
-  useEffect(() => {
-    const altura = ref.current.getBoundingClientRect().top;
-    if (altura > size.height * 0.75) {
-      setSlide('slideDown');
-      setEstica('diminue');
-      return;
-    } else {
-      setSlide('slideUp');
-      setEstica('estica');
-      return;
-    }   
-  }, [position, size]);
-
   return (
     <section className="grid_services">
       <h2
-        ref={ ref }
-        style={{ animation: `${slide} 2s forwards`, }}
-        className="titles">Serviços</h2>
+        className="titles">Categorias</h2>
       <hr
-        style={{ animation: `${estica} 2s forwards`, }}
         className="line_serv"/>
       <div className="img_grid_container">
         {

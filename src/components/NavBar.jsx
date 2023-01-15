@@ -3,27 +3,20 @@ import { NavLink } from 'react-router-dom';
 import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';
 
-import {
-  servicesDetails,
-} from '../utils/object.services.details';
+import servicesDetails from '../utils/object.services.details';
 
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-
-import { FaCog } from "react-icons/fa";
-import { FaFireExtinguisher } from "react-icons/fa";
-import { FaHandHoldingMedical } from "react-icons/fa";
-import { FaTree } from "react-icons/fa";
-import { FaHardHat } from "react-icons/fa";
 
 import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
 import logo2 from '../images/logo branca.png';
 
-function NavBar() {
+function NavBar({ propBgColor, logo }) {
   const [actvate, setActvate] = useState("0");
   const [display, setDisplay] = useState("flex")
   const [fade, setFade] = useState("");
+  const [useLogo, setLogo] = useState(logo1)
   const [xbutton, setXbutton] = useState({
     line1: '',
     line2: '',
@@ -32,7 +25,7 @@ function NavBar() {
   const [navPosition, setnavPosition] = useState({
     position: '',
     top: '',
-    bgColor: '',
+    bgColor: propBgColor,
     padding: '',
     borderR: '',
     slide: '',
@@ -68,11 +61,16 @@ function NavBar() {
       setnavPosition({
         position: '',
         top: '',
-        bgColor: '',
+        bgColor: propBgColor,
         padding: '',
         borderR: '',
         slide: '',
       })
+    };
+    if (logo === 'white') {
+      setLogo(logo2);
+    } if (logo === 'black') {
+      setLogo(logo1);
     };
     
   }, [size, heigthEl])
@@ -127,7 +125,7 @@ function NavBar() {
       animation: `${ navPosition.slide } 2s forwards`}}>
       <h1 className="h1_logo">
         <a href='#header' className='a_logo_link'>
-          <img className="logo_nav" src={ navPosition.position === 'fixed' ? logo2 : logo1 } alt="logo" />
+          <img className="logo_nav" src={ navPosition.position === 'fixed' ? logo2 : useLogo } alt="logo" />
         </a>
       </h1>
       <ul

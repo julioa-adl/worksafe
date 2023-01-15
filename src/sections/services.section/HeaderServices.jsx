@@ -6,9 +6,7 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-import bg_services from '../../images/bg-services.png';
-
-function HeaderServices({ tamanho }) {
+function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color }) {
   const [slide, setSlide] = useState('slideout');
 
   const size = useWindowSize();
@@ -33,27 +31,30 @@ function HeaderServices({ tamanho }) {
   return (
     <div
       id='header'
-      className="header_container"
+      className="header_container header_container_services"
       style={{
-        background: `url(${bg_services})`,
-        backgroundPosition: "top",
+        background: `url(${bg})`,
+        backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: `${tamanho}vh`
+        height: `${tamanho}vh`,
       }}
     >
       <TopBar/>
-      <NavBar/>
+      <NavBar propBgColor={'#222222'} logo={'white'}/>
       <div className="txt_header_container">
         <h1
-          style={{ animation: `${slide} 2s forwards`, }}
-          className="stay_safe stay_anime">NOSSOS <span className="safe">SERVIÇOS</span></h1>
-        <h1
-        style={{ animation: `${slide} 2.5s forwards`, }}
-        className="stay_safe_2 stay_anime">NOSSOS <span className="safe_2">SERVIÇOS</span></h1>
-        <h1
-        style={{ animation: `${slide} 3s forwards`, }}
-        className="stay_safe_3 stay_anime">NOSSOS <span className="safe_3">SERVIÇOS</span></h1>
+          style={{ 
+            animation: `${slide} 2s forwards`,
+            color: `${ txt1Color }`,
+          }}
+          className="stay_safe stay_anime txt_services">{ objNames.name1 }
+          <span
+            className="safe txt_services"
+            style={{
+              color: `${ txt2Color }`
+            }}
+          >{ objNames.name2 }</span></h1>
       </div>
     </div>
   )

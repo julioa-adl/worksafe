@@ -40,7 +40,7 @@ function Header() {
       backgroundRepeat: "no-repeat",
     }}>
       <TopBar/>
-      <NavBar/>
+      <NavBar propBgColor={ '' }/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}
