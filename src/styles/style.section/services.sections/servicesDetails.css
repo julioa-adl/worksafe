@@ -64,4 +64,9 @@
   .list_service {
     font-size: 0.9em;
   }
+
+  .carousel {
+    height: 400px;
+    margin-bottom: 120px;
+  }
 }

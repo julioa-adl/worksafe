@@ -21,6 +21,7 @@ function ServicesDetailsSection({ service }) {
           </ul>
         </div>
         <Carousel
+          className='carousel'
           width={ 700 }
           autoPlay
           infiniteLoop 
