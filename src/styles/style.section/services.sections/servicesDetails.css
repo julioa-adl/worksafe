@@ -45,6 +45,14 @@
   cursor: pointer;
 }
 
+.carousel {
+  width: 50%;
+}
+
+.thumbs-wrapper {
+  width: 180%;
+}
+
 @media (max-width: 900px) {
   .details_container {
     flex-direction: column-reverse;
@@ -66,7 +74,7 @@
   }
 
   .carousel {
-    height: 500px;
-    margin-bottom: 120px;
+    /* height: 500px; */
+    /* margin-bottom: 120px; */
   }
 }
