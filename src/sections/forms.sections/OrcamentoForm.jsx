@@ -4,26 +4,25 @@ import emailjs from '@emailjs/browser';
 
 import form_orc_img from '../../images/form_orc_img.png'
 import '../../styles/style.section/orcamento.sections/orcamentoForm.css';
-import TelefoneBrasileiroInput from "react-telefone-brasileiro";
 
 function OrcamentoForm() {
   const [isDisabled, setDisable] = useState(true);
-  const [telefone, setTelefone] = useState("");
   const [formInputs, setform] = useState({
     name: '',
     cliente: '',
     email: '',
+    contato: '',
     detalhes: '',
   });
 
   useEffect(() => {
     const emailRegex = /\S+@\S+\.\S+/;
-    // const phineRegex = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
+    const phineRegex = /^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/;
 
-    const {name, cliente, email, detalhes } = formInputs;
-    if (!name || !cliente || !email || !detalhes
+    const {name, cliente, email, contato, detalhes } = formInputs;
+    if (!name || !cliente || !email || !contato || !detalhes
       || !emailRegex.test(email)
-      ) {
+      || !phineRegex.test(contato)) {
       setDisable(true);
     } else {
       setDisable(false);
@@ -40,13 +39,13 @@ function OrcamentoForm() {
 
   const bttnSubmit = (e) => {
     e.preventDefault();
-    const {name, cliente, email, detalhes } = formInputs;
+    const {name, cliente, email, contato, detalhes } = formInputs;
 
     const objParams = {
       from_name: name,
       cliente,
       email,
-      contato: telefone,
+      contato,
       message: detalhes,
     }
 
@@ -56,9 +55,9 @@ function OrcamentoForm() {
         name: '',
         cliente: '',
         email: '',
+        contato: '',
         detalhes: '',
       });
-      setTelefone('')
       alert('mensagem enviada')
     }, (err) => {
       console.log('erro no envio' + err)
@@ -110,16 +109,7 @@ function OrcamentoForm() {
 
         <label>
           *Contato:
-          <TelefoneBrasileiroInput
-            value={telefone}
-            onChange={(ev) => setTelefone(ev.target.value)}
-            separaNono
-            temDDD
-            separaDDD
-            placeholder="(xx) x xxxx-xxxx"
-            className="input_form_orc"
-          />
-          {/* <input
+          <input
             onChange={ handleChange }
             id="contato"
             type="text"
@@ -127,7 +117,7 @@ function OrcamentoForm() {
             className="input_form_orc"
             value={formInputs.contato}
             required
-          /> */}
+          />
         </label>
 
         <label>
