@@ -34,9 +34,6 @@ function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color }) {
       className="header_container header_container_services"
       style={{
         background: `url(${bg})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
         height: `${tamanho}vh`,
       }}
     >

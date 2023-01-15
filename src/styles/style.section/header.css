@@ -8,6 +8,8 @@
 
 .header_container_services {
   background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .txt_header_container {
@@ -66,9 +68,13 @@
 
   .txt_header_container {
     margin-left: 20px;
-    margin-top: 30px;
+    margin-top: 25%;
     font-size: 20px;
   }
+
+  /* .txt_services {
+    margin-top: 25%;
+  } */
 
   .header_container {
     height: 70vh;

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import logo_branca from '../images/Vertical-Branca.png';
 
@@ -9,6 +10,8 @@ import { BsTelephone } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
+
+import servicesDetails from '../utils/object.services.details';
 
 import '../styles/style.section/footer.css';
 
@@ -23,11 +26,16 @@ function Footer() {
       <div className="links_uteis">
         <h1>LINKS ÚTEIS</h1>
         <ul>
-          <li><span>Manutenção Industrial</span></li>
-          <li><span>Gestão de Riscos</span></li>
-          <li><span>Bombeiro Civil</span></li>
-          <li><span>Limpeza de Silos</span></li>
-          <li><span>Treinamentos</span></li>
+        {
+          servicesDetails.map((servs) => (
+            <NavLink
+              to={ `/servicos/${servs.pathName}` }>
+              <li className="NL">
+                { servs.service }
+              </li>
+            </NavLink>
+          ))
+        }
         </ul>
       </div>
       <div className="infos_contato">
