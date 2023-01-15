@@ -30,7 +30,7 @@
 
 .serv_img_grid:hover .serv_title {
   background-color: hsla(120, 100%, 50%, 0);
-  top: 50%;
+  bottom: 10%;
   color: #BEFF25;
 }
 

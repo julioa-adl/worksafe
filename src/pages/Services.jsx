@@ -9,7 +9,7 @@ import Whatsapp from '../components/Whatsapp';
 function Services() {
   return (
     <div>
-      <HeaderServices/>
+      <HeaderServices tamanho={ 60 } />
       <ServicesGrid/>
       <Footer/>
       <Direitos/>

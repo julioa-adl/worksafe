@@ -16,6 +16,7 @@ export const img_manutencao = require.context('../images/img-services-details/ma
 export const servicesDetails = [
   {
     id: 0,
+    pathName: 'manutencao',
     service: 'Manutenção',
     icon: <FaCog/>,
     cover: capa_manutencao,
@@ -26,6 +27,7 @@ export const servicesDetails = [
   },
   {
     id: 1,
+    pathName: 'brigada',
     service: 'Brigada',
     icon: <FaFireExtinguisher/>,
     cover: capa_bombeiro,
@@ -36,6 +38,7 @@ export const servicesDetails = [
   },
   {
     id: 2,
+    pathName: 'resgate',
     service: 'Resgate',
     icon: <FaHandHoldingMedical/>,
     cover: capa_resgate,
@@ -46,6 +49,7 @@ export const servicesDetails = [
   },
   {
     id: 3,
+    pathName: 'arboricultura',
     service: 'Arboricultura',
     icon: <FaTree/>,
     cover: capa_arboricultura,
@@ -56,6 +60,7 @@ export const servicesDetails = [
   },
   {
     id: 4,
+    pathName: 'treinamentos',
     service: 'Treinamentos',
     icon: <FaHardHat/>,
     cover: capa_treinamento,

@@ -8,7 +8,7 @@ import NavBar from '../../components/NavBar';
 
 import bg_services from '../../images/bg-services.png';
 
-function HeaderServices() {
+function HeaderServices({ tamanho }) {
   const [slide, setSlide] = useState('slideout');
 
   const size = useWindowSize();
@@ -39,7 +39,7 @@ function HeaderServices() {
         backgroundPosition: "top",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "60vh"
+        height: `${tamanho}vh`
       }}
     >
       <TopBar/>

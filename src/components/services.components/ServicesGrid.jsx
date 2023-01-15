@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 import {
   servicesDetails,
-  img_manutencao,
 } from '../../utils/object.services.details';
 
 import useWindowSize from '../../hooks/useWindowSize';
@@ -15,7 +14,6 @@ import '../../styles/style.section/services.sections/servicesGrid.css';
 function ServicesGrid() {
   const [slide, setSlide] = useState('slideUp');
   const [estica, setEstica] = useState('estica');
-  const [seeMore, setSeeMore] = useState('none');
 
   const ref = useRef(null);
 
@@ -23,9 +21,6 @@ function ServicesGrid() {
   const position = useWindowScroll();
 
   useEffect(() => {
-    if (size.width > 900) {
-      setSeeMore('block');
-    }
     const altura = ref.current.getBoundingClientRect().top;
     if (altura > size.height * 0.75) {
       setSlide('slideDown');
@@ -51,7 +46,7 @@ function ServicesGrid() {
         {
           servicesDetails.map((servs) => (
             <NavLink
-              to="/"
+              to={ `/servicos/${servs.pathName}` }
               className="img_proj_container img_serv_container"
             >
               <div

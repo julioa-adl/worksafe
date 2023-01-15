@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Sobre from './pages/About';
 import Orcamento from "./pages/Orcamento";
 import Services from "./pages/Services";
+import ServicesDetails from "./pages/ServicesDetails";
+import My404Component from "./pages/My404Component";
 
 function App() {
   return (
@@ -14,9 +16,10 @@ function App() {
       <Route exact path="/sobre" component = { Sobre }/>
       <Route exact path="/cote-agora" component = { Orcamento }/>
       <Route exact path="/servicos" component = { Services }/>
-      {/* <Route exact path="/servicos/:id" component={ servicesDetails } /> */}
+      <Route exact path="/servicos/:id" component={ ServicesDetails } />
       {/* <Route exact path="/portifolio" component = { Portifolio }/> */}
       {/* <Route exact path="/portifolio/:id" component={ PortifolioDetails } /> */}
+      {/* <Route component={ My404Component } /> */}
     </BrowserRouter>
   );
 }

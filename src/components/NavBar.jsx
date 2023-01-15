@@ -155,10 +155,13 @@ function NavBar() {
                   <ul className="dropDown_list">
                     {
                       servicesDetails.map((servs) => (
-                        <li className="NL">
-                          { servs.icon }
-                          { servs.service }
-                        </li>
+                        <NavLink
+                          to={ `/servicos/${servs.pathName}` }>
+                          <li className="NL">
+                            { servs.icon }
+                            { servs.service }
+                          </li>
+                        </NavLink>
                       ))
                     }
                   </ul>
