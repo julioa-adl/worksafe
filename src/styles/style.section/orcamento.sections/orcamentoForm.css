@@ -1,8 +1,10 @@
 .div_container_form {
   display: flex;
-  width: 70%;
-  margin: 0 200px;
+  align-items: center;
+  width: 100%;
+  padding: 0 200px;
   gap: 20px;
+  min-height: 800px;
 }
 
 .img_orc {
@@ -68,6 +70,7 @@
 @media (max-width: 1240px) {
   .div_container_form {
     flex-direction: column-reverse;
+    padding: 0 20px;
   }
 
   .img_orc {
@@ -84,7 +87,7 @@
 
   .div_container_form {
     width: 100%;
-    margin: 0 20px;
+    /* margin: 0 20px; */
   }
 
   .input_form_orc {

@@ -44,7 +44,7 @@ function HeaderAbout() {
       }}
     >
       <TopBar/>
-      <NavBar/>
+      <NavBar  propBgColor={''} logo={'black'}/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}

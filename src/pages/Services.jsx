@@ -12,7 +12,7 @@ import bg_services from '../images/bg-services.png';
 function Services() {
   return (
     <div>
-      <HeaderServices tamanho={ 40 } bg={ bg_services } objNames={ {name1: 'NOSSOS ', name2: 'SERVIÇOS'} } />
+      <HeaderServices tamanho={ 60 } bg={ bg_services } objNames={ {name1: 'NOSSOS ', name2: 'SERVIÇOS'} } />
       <ServicesGrid/>
       <Footer/>
       <Direitos/>

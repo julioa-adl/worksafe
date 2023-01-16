@@ -13,7 +13,7 @@ function ServicesDetails({ match }) {
   return (
     <div>
       <HeaderServices
-        tamanho={ 40 }
+        tamanho={ 60 }
         bg={ objServ[0].cover }
         txt2Color='white'
         objNames={ {name1: '', name2: objServ[0].service} }  />
