@@ -11,7 +11,9 @@ function ServicesDetailsSection({ service }) {
       <hr className="line_serv"/>
       <div className='details_container'>
         <div className='txt_details_container'>
+          <h1 className='titles'>DETALHES:</h1>
           <p className='txt_service'>{ service.text }</p>
+          <h1 className='titles'>LISTA DE SERVIÇOS:</h1>
           <ul className='list_service'>
             {
               service.listServ.map((serv) => (
