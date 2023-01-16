@@ -13,10 +13,12 @@ function ServicesDetails({ match }) {
   return (
     <div>
       <HeaderServices
-        tamanho={ 60 }
-        bg={ objServ[0].cover }
-        txt2Color='white'
-        objNames={ {name1: '', name2: objServ[0].service} }  />
+        tamanho={ 50 }
+        // bg={ objServ[0].cover }
+        bg='#222222'
+        txt1Color='#BEFF25'
+        txt2Color='#BEFF25'
+        objNames={ {name1: objServ[0].icon, name2: objServ[0].service} }  />
         <ServicesDetailsSection service={ objServ[0] }/>
         <Footer/>
         <Direitos/>

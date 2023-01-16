@@ -45,10 +45,10 @@
   font-weight: 200;
 }
 
-.txt_services {
+/* .txt_services {
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: #222222;
-}
+} */
 
 @media (max-width: 1148px) {
 
