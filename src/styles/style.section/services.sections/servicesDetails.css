@@ -22,7 +22,7 @@
 }
 
 .list_service li {
-  margin-top: 2vh;
+  margin-top: 1vh;
   transition: 0.4s ease-in-out;
   list-style: none;
 }
