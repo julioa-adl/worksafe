@@ -4,6 +4,7 @@
   height: 100vh;
   display: block;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .header_container_services {
@@ -16,7 +17,7 @@
   font-family: 'Bebas Neue', cursive;
   font-size: 2.5vw;
   margin-left: 10vw;
-  margin-top: 100px;
+  margin-top: 10vh;
 }
 
 .safe {

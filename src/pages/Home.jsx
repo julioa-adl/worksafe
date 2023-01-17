@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '../sections/Header';
 import Main from '../sections/Main';
@@ -9,6 +9,10 @@ import Whatsapp from '../components/Whatsapp';
 import '../styles/style.pages/home.css';
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="home">
       <Header />

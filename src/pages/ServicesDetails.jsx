@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import HeaderServices from '../sections/services.section/HeaderServices';
 import ServicesDetailsSection from '../sections/services.section/ServicesDetailsSection';
@@ -9,6 +9,10 @@ import Direitos from '../components/Direitos';
 function ServicesDetails({ match }) {
   const service = match.params.id;
   const objServ = servicesDetails.filter((serv) => serv.pathName === service);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [service]);
   
   return (
     <div>
