@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+
 
 import Header from '../sections/Header';
 import Main from '../sections/Main';
@@ -11,6 +13,7 @@ import '../styles/style.pages/home.css';
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (

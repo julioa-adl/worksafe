@@ -11,11 +11,11 @@ import Sobre from './pages/About';
 import Orcamento from "./pages/Orcamento";
 import Services from "./pages/Services";
 import ServicesDetails from "./pages/ServicesDetails";
-import My404Component from "./pages/My404Component";
+// import My404Component from "./pages/My404Component";
 
 function App() {
   ReactGA.initialize('G-SS6FXT77D7');
-  ReactGA.pageview(window.location.pathname + window.location.search);
+
   return (
     <BrowserRouter>
       <Route exact path="/" component = { Home }/>

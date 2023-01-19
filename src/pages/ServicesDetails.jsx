@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import HeaderServices from '../sections/services.section/HeaderServices';
 import ServicesDetailsSection from '../sections/services.section/ServicesDetailsSection';
@@ -12,6 +13,7 @@ function ServicesDetails({ match }) {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
   }, [service]);
   
   return (
