@@ -9,9 +9,12 @@ import Footer from '../sections/Footer';
 import Direitos from '../components/Direitos';
 import Whatsapp from '../components/Whatsapp';
 
+import ReactGA from 'react-ga';
+
 function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (

@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import ReactGA from 'react-ga';
+
 
 import HeaderOrcamento from '../sections/forms.sections/HeaderOrcamento';
 import OrcamentoForm from '../sections/forms.sections/OrcamentoForm';
@@ -9,6 +11,7 @@ import Whatsapp from '../components/Whatsapp';
 function Orcamento() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (
