@@ -11,7 +11,7 @@ import ServicesDetails from "./pages/ServicesDetails";
 // import My404Component from "./pages/My404Component";
 import ReactGA from 'react-ga';
 
-ReactGA.initialize('G-SS6FXT77D7');
+ReactGA.initialize('UA-218904708-2');
 
 function App() {
 
