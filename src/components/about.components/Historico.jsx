@@ -4,7 +4,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import useWindowScroll from '../../hooks/useWindowScroll';
 // import useInterval from '../../hooks/useInterval';
 
-import equipe from '../../images/equipe.png';
+import equipe from '../../images/equipe.svg';
 
 import gestores from '../../utils/object.gestores';
 
