@@ -6,7 +6,7 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-import bg_aboutUs from '../../images/bg-aboutUs.png';
+import bg_aboutUs from '../../images/bg-aboutUs.svg';
 
 function HeaderAbout() {
   const [slide, setSlide] = useState('slideout');

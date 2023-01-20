@@ -33,7 +33,7 @@ function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color }) {
       id='header'
       className="header_container header_container_services"
       style={{
-        background: `url(${bg})`,
+        background: `${bg}`,
         height: `${tamanho}vh`,
       }}
     >

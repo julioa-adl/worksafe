@@ -6,7 +6,7 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-import bgHeader_img from '../../images/bg-header-form.png';
+import bgHeader_img from '../../images/bg-header-form.svg';
 
 function HeaderAbout() {
   const [slide, setSlide] = useState('slideout');
@@ -44,17 +44,17 @@ function HeaderAbout() {
       }}
     >
       <TopBar/>
-      <NavBar  propBgColor={''} logo={'black'}/>
+      <NavBar  propBgColor={''} logo={'white'}/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}
           className="stay_safe stay_anime">SOLICITE UM <span className="safe">ORÇAMENTO</span></h1>
         <h1
         style={{ animation: `${slide} 2.5s forwards`, }}
-        className="stay_safe_2 stay_anime">SOLICITE UM <span className="safe_2">ORÇAMENTO</span></h1>
+        className="stay_safe_2 stay_anime white">SOLICITE UM <span className="safe_2 white">ORÇAMENTO</span></h1>
         <h1
         style={{ animation: `${slide} 3s forwards`, }}
-        className="stay_safe_3 stay_anime">SOLICITE UM <span className="safe_3">ORÇAMENTO</span></h1>
+        className="stay_safe_3 stay_anime white">SOLICITE UM <span className="safe_3 white">ORÇAMENTO</span></h1>
       </div>
     </div>
   )

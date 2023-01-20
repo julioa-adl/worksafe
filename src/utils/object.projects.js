@@ -1,11 +1,11 @@
-import project1 from '../images/img-projects/1.png';
-import project2 from '../images/img-projects/2.png';
-import project3 from '../images/img-projects/3.png';
-import project4 from '../images/img-projects/4.png';
-import project5 from '../images/img-projects/5.png';
-import project6 from '../images/img-projects/6.png';
-import project7 from '../images/img-projects/7.png';
-import project8 from '../images/img-projects/8.png';
+import project1 from '../images/img-projects/1.svg';
+import project2 from '../images/img-projects/2.svg';
+import project3 from '../images/img-projects/3.svg';
+import project4 from '../images/img-projects/4.svg';
+import project5 from '../images/img-projects/5.svg';
+import project6 from '../images/img-projects/6.svg';
+import project7 from '../images/img-projects/7.svg';
+import project8 from '../images/img-projects/8.svg';
 
 const projects = [
   {

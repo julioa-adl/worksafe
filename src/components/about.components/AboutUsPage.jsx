@@ -1,6 +1,6 @@
 import React from 'react';
 
-import odenis from '../../images/odenis.png'
+import odenis from '../../images/odenis.svg'
 
 import '../../styles/style.components/aboutUsPages.css';
 
