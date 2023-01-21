@@ -17,6 +17,7 @@ function ServicesGrid() {
         {
           servicesDetails.map((servs) => (
             <NavLink
+              key={ `servDet${ servs.service }`}
               to={ `/servicos/${servs.pathName}` }
               className="img_proj_container img_serv_container"
             >

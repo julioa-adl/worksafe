@@ -140,6 +140,7 @@ function Historico() {
         gestores.filter((gest) => gest.id === nextDep)
           .map((fGest) => (
             <div
+              key={ `gestores${ fGest.name }`}
               className="depoiments_container depoiment_funcionarios"
               // onMouseDown={ hover }
             >

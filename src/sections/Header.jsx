@@ -44,13 +44,13 @@ function Header({ path }) {
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}
-          className="stay_safe stay_anime">Stay <span className="safe">Safe,</span> Work <span className="safe">Safe.</span></h1>
+          className="stay_safe">Stay <span className="safe">Safe,</span> Work <span className="safe">Safe.</span></h1>
         <h1
         style={{ animation: `${slide} 2.5s forwards`, }}
-        className="stay_safe_2 stay_anime">Stay <span className="safe_2">Safe,</span> Work <span className="safe_2">Safe.</span></h1>
+        className="stay_safe_2">Stay <span className="safe_2">Safe,</span> Work <span className="safe_2">Safe.</span></h1>
         <h1
         style={{ animation: `${slide} 3s forwards`, }}
-        className="stay_safe_3 stay_anime">Stay <span className="safe_3">Safe,</span> Work <span className="safe_3">Safe.</span></h1>
+        className="stay_safe_3">Stay <span className="safe_3">Safe,</span> Work <span className="safe_3">Safe.</span></h1>
       </div>
 
       {/* <h3 >Não vendemos segurança, nós a praticamos!</h3> */}

@@ -28,7 +28,7 @@ function Footer() {
         <ul>
         {
           servicesDetails.map((servs) => (
-            <li>
+            <li key={`footerServ${ servs.service }`}>
               <span>
                 <NavLink  className="links_uteis_links" to={ `/servicos/${servs.pathName}` }>
                   { servs.service }

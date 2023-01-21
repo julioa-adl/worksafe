@@ -3,18 +3,21 @@ import capa_bombeiro from '../images/img-services-details/bombeiro/capa.png';
 import capa_resgate from '../images/img-services-details/resgate/capa.png';
 import capa_arboricultura from '../images/img-services-details/arboricultura/capa.png';
 import capa_treinamento from '../images/img-services-details/treinamentos/capa.png';
+import capa_alpinismo from '../images/img-services-details/alpinismo/capa.svg';
 
 import { FaCog } from "react-icons/fa";
 import { FaFireExtinguisher } from "react-icons/fa";
 import { FaHandHoldingMedical } from "react-icons/fa";
 import { FaTree } from "react-icons/fa";
 import { FaHardHat } from "react-icons/fa";
+import { GiMountainClimbing } from "react-icons/gi";
 
 const img_manutencao = require.context('../images/img-services-details/manutencao/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
 const img_brigada = require.context('../images/img-services-details/bombeiro/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
 const img_resgate = require.context('../images/img-services-details/resgate/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
 const img_arboricultura = require.context('../images/img-services-details/arboricultura/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
 const img_treinamentos = require.context('../images/img-services-details/treinamentos/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
+const img_alpinismo = require.context('../images/img-services-details/alpinismo/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
 
 
 const servicesDetails = [
@@ -77,6 +80,18 @@ const servicesDetails = [
     listServ: ['Trabalho em Altura NR-35', 'Trabalhador em Espaços Confinados NR-33', 'SUpervisor em Altura NR-35', 'Supervisor para trabalhos em Espaços Confinados NR-33', 'Resgate Técnico Industrial RTI', 'Instalador Qualificado para Linha de Vida Temporária', 'Atendimento Pré-Hospitalar APH', 'Formação de Brigada de Emergência', 'Treinamentos Personalizados para Suas Necessidades'],
     images: img_treinamentos.keys(),
     descriptImg: img_treinamentos,
+  },
+  {
+    id: 5,
+    pathName: 'alpinismo-industrial',
+    service: 'Alpinismo Industrial',
+    icon: <GiMountainClimbing/>,
+    cover: capa_alpinismo,
+    title: 'Com nossa equipe de Apinismo Industrial chegamos onde Você Precisa!',
+    text: 'Alpinismo industrial é uma técnica utilizada para realizar trabalhos em altura em estruturas industriais, como prédios, torres, ponte e chimneys. Nossa equipe altamente treinada e experiente oferece serviços de alta qualidade e segurança para garantir que o trabalho seja realizado de maneira eficiente e segura. Nós garantimos que todos os nossos trabalhos serão realizados de acordo com as normas e regulamentos de segurança aplicáveis. Entre em contato conosco hoje para saber mais sobre como podemos ajudá-lo com suas necessidades de alpinismo industrial.',
+    listServ: ["Limpeza de fachadas e janelas", "Instalação e manutenção de antenas e equipamentos de telecomunicações",    "Manutenção de estruturas de aço e concreto",    "Reparos e pintura",    "Instalação e manutenção de sistemas de iluminação",    "Inspeções e relatórios de segurança",    "Resgate e salvamento em altura"],
+    images: img_alpinismo.keys(),
+    descriptImg: img_alpinismo,
   },
 ];
 

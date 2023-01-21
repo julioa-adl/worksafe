@@ -15,8 +15,9 @@
 
 .txt_header_container {
   font-family: 'Bebas Neue', cursive;
-  font-size: 2.5vw;
-  margin-left: 10vw;
+  font-size: 2.5rem;
+  position: absolute;
+  /* margin-left: 10vw; */
   margin-top: 10vh;
 }
 
@@ -25,25 +26,31 @@
 }
 
 .stay_safe {
+  position: relative;
   transition: transform 0.3s ease;
+  left: 10vw;
 }
 
 .stay_safe_2 {
+  position: relative;
   opacity: 0.5;
   color: hsla(120, 100%, 50%, 0);
   -webkit-text-stroke-width: 0.8px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
   font-weight: 500;
+  left: 10vw;
 }
 
 .stay_safe_3 {
+  position: relative;
   opacity: 0.2;
   color: hsla(120, 100%, 50%, 0);
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: rgb(0, 0, 0);
   transition: transform 0.3s ease;
   font-weight: 200;
+  left: 10vw;
 }
 
 .white {

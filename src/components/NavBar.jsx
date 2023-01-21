@@ -146,7 +146,7 @@ function NavBar({ propBgColor, logo, path }) {
         <li style={{ animation: `${ fade }`, }}>
           <div
               className="nav_service" >
-            <p
+            <div
               onMouseEnter={ hoverDropEnter }
               onMouseLeave={ hoverDropOut }
               className="NL NL_serv">
@@ -162,6 +162,7 @@ function NavBar({ propBgColor, logo, path }) {
                     {
                       servicesDetails.map((servs) => (
                         <NavLink
+                          key={`utils${ servs.service }`}
                           to={ `/servicos/${servs.pathName}` }>
                           <li className="NL">
                             { servs.icon }
@@ -174,7 +175,7 @@ function NavBar({ propBgColor, logo, path }) {
                   ) : null
                 }
                 </div>
-            </p>
+            </div>
                 <div>
                     {
                       !dropDown

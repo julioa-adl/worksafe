@@ -60,7 +60,7 @@ function Services() {
               <button
                 id={ serv.id }
                 className="btn_services"
-                key={ serv.service }
+                key={ `btnServ${serv.service}` }
                 onClick={ handleClickServ }
                 style={{
                   backgroundColor: `${serv.id === Number(renderServ) ? "#f44336" : ''}`,
@@ -75,14 +75,14 @@ function Services() {
         {
           services.filter((serv) => serv.id === Number(renderServ))
             .map((thisServ) => (
-              <div key={ thisServ.id } className="container_article_img">
+              <div key={ `servHome${thisServ.id}` } className="container_article_img">
                 <article>
                   <h1>{ thisServ.title }</h1>
                   <p>{ thisServ.text }</p>
                   <ul>
                     {
                       thisServ.listServ.map((servIten) => (
-                        <li>{ servIten }</li>
+                        <li key={`listServ${ servIten }`}>{ servIten }</li>
                       ))
                     }
                   </ul>

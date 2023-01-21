@@ -136,7 +136,7 @@ function AboutUs() {
       {
         depoiments.filter((dep) => dep.id === nextDep)
           .map((fDep) => (
-            <div className="depoiments_container">
+            <div key={`depoim${ fDep.name }`} className="depoiments_container">
               <div className="depoiment">
               {
                   renderTimer ? (

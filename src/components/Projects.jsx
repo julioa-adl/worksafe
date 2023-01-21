@@ -57,6 +57,7 @@ function Projects() {
         {
           projects.map((proj) => (
             <div
+              key={`projet${ proj.id }`}
               className="img_proj_container"
               style={{
                 display: `${proj.id > 3 ? seeMore : "" }` }}

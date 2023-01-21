@@ -29,7 +29,7 @@ function ServicesDetailsSection({ service }) {
         >
           {
             service.images.map((img) => (
-              <div>
+              <div key={ `serv${img}` }>
                 <img src={ service.descriptImg(img) } alt=''/>
               </div>
             ))
