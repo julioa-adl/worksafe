@@ -12,7 +12,7 @@ import '../styles/style.components/navbar.css';
 import logo1 from '../images/Horizontal-Color.png';
 import logo2 from '../images/logo branca.png';
 
-function NavBar({ propBgColor, logo }) {
+function NavBar({ propBgColor, logo, path }) {
   const [actvate, setActvate] = useState("0");
   const [display, setDisplay] = useState("flex")
   const [fade, setFade] = useState("");
@@ -134,9 +134,15 @@ function NavBar({ propBgColor, logo }) {
         className="nav_list">
         {/* <img className="logo_nav_mobile" src={ logo3 } alt="logo" /> */}
         <li style={{ animation: `${ fade }`, }}>
-          <NavLink className="NL" to="/">Home</NavLink></li>
+          <NavLink
+            className={`NL ${path === "/" ? "active_now" : ""}`}
+            to="/"
+            >Home</NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
-          <NavLink className="NL" to="/sobre">Sobre Nós</NavLink></li>
+          <NavLink
+            className={`NL ${path === "/sobre" ? "active_now" : ""}`}
+            to="/sobre"
+            >Sobre Nós</NavLink></li>
         <li style={{ animation: `${ fade }`, }}>
           <div
               className="nav_service" >
@@ -145,7 +151,9 @@ function NavBar({ propBgColor, logo }) {
               onMouseLeave={ hoverDropOut }
               className="NL NL_serv">
                 <div className="NL_serv_div">
-                  <NavLink className="NL" to="/servicos">
+                  <NavLink
+                    className={`NL ${path === "/servicos" ? "active_now" : ""}`}
+                    to="/servicos">
                     Serviços
                   </NavLink>
                 {

@@ -9,7 +9,7 @@ import NavBar from '../components/NavBar';
 
 import industria_img from '../images/header.svg';
 
-function Header() {
+function Header({ path }) {
   const [slide, setSlide] = useState('slideout');
 
   const size = useWindowSize();
@@ -40,7 +40,7 @@ function Header() {
       backgroundRepeat: "no-repeat",
     }}>
       <TopBar/>
-      <NavBar propBgColor={ '' }/>
+      <NavBar propBgColor={ '' } path={ path }/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}

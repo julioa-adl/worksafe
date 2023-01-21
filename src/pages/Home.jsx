@@ -10,7 +10,9 @@ import Whatsapp from '../components/Whatsapp';
 
 import '../styles/style.pages/home.css';
 
-function Home() {
+function Home({ match }) {
+  const url = match.path;
+
   useEffect(() => {
     window.scrollTo(0, 0);
     ReactGA.pageview(window.location.pathname);
@@ -18,7 +20,7 @@ function Home() {
 
   return (
     <div className="home">
-      <Header />
+      <Header path={ url }/>
       <Main />
       <Footer/>
       <Direitos/>

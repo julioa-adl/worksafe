@@ -11,7 +11,9 @@ import Whatsapp from '../components/Whatsapp';
 import bg_services from '../images/bg-services.svg';
 
 
-function Services() {
+function Services({ match }) {
+  const url = match.path;
+
   useEffect(() => {
     window.scrollTo(0, 0);
     ReactGA.pageview(window.location.pathname);
@@ -25,6 +27,7 @@ function Services() {
       txt1Color='#222222'
       txt2Color='white'
       objNames={ {name1: 'NOSSOS ', name2: 'SERVIÇOS'} }
+      path={ url }
       />
       <ServicesGrid/>
       <Footer/>

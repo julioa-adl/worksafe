@@ -6,7 +6,7 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color }) {
+function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color, path}) {
   const [slide, setSlide] = useState('slideout');
 
   const size = useWindowSize();
@@ -38,7 +38,7 @@ function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color }) {
       }}
     >
       <TopBar/>
-      <NavBar propBgColor={'#222222'} logo={'white'}/>
+      <NavBar propBgColor={'#222222'} logo={'white'} path={ path }/>
       <div className="txt_header_container">
         <h1
           style={{ 

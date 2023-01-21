@@ -12,6 +12,11 @@
   z-index: 12;
 }
 
+.active_now {
+  color: #BEFF25;
+  text-decoration: underline #BEFF25;
+}
+
 .h1_logo {
   z-index: 120;
 }

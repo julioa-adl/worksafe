@@ -8,7 +8,7 @@ import NavBar from '../../components/NavBar';
 
 import bg_aboutUs from '../../images/bg-aboutUs.svg';
 
-function HeaderAbout() {
+function HeaderAbout({ path }) {
   const [slide, setSlide] = useState('slideout');
 
   const size = useWindowSize();
@@ -43,7 +43,7 @@ function HeaderAbout() {
       }}
     >
       <TopBar/>
-      <NavBar propBgColor={'#222222'} logo={'white'}/>
+      <NavBar propBgColor={'#222222'} logo={'white'} path={ path }/>
       <div className="txt_header_container">
         <h1
           style={{ animation: `${slide} 2s forwards`, }}

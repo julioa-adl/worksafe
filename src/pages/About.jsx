@@ -11,7 +11,9 @@ import Whatsapp from '../components/Whatsapp';
 
 import ReactGA from 'react-ga';
 
-function About() {
+function About({ match }) {
+  const url = match.path;
+
   useEffect(() => {
     window.scrollTo(0, 0);
     ReactGA.pageview(window.location.pathname);
@@ -19,7 +21,7 @@ function About() {
 
   return (
     <div>
-      <HeaderAbout/>
+      <HeaderAbout path={ url }/>
       <AboutUsPage/>
       <Mission/>
       <Historico/>
