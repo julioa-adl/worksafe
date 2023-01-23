@@ -1,8 +1,8 @@
-import manutencao from '../images/img-services/manutencao.svg'
-import bombeiro from '../images/img-services/bombeiro.svg'
-import difAcesso from '../images/img-services/difAcesso.svg'
-import terceirizacao from '../images/img-services/terceirizacao.svg'
-import treinamento from '../images/img-services/treinamento.svg'
+import manutencao from '../images/img-services/3.webp'
+import bombeiro from '../images/img-services/1.webp'
+import difAcesso from '../images/img-services/2.webp'
+import terceirizacao from '../images/img-services/4.webp'
+import treinamento from '../images/img-services/5.webp'
 
 import { VscTools } from "react-icons/vsc";
 import { MdOutlineEmergency } from "react-icons/md";

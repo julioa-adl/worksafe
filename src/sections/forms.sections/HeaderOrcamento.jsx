@@ -6,7 +6,7 @@ import useWindowScroll from '../../hooks/useWindowScroll';
 import TopBar from '../../components/TopBar';
 import NavBar from '../../components/NavBar';
 
-import bgHeader_img from '../../images/bg-header-form.svg';
+import bgHeader_img from '../../images/bg-header-form.webp';
 
 function HeaderAbout() {
   const [slide, setSlide] = useState('slideout');

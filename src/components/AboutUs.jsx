@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-import equipe from '../images/equipe.svg';
+import equipe from '../images/equipe.webp';
 
 import useWindowSize from '../hooks/useWindowSize';
 import useWindowScroll from '../hooks/useWindowScroll';

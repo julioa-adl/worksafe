@@ -7,7 +7,7 @@ import useWindowScroll from '../hooks/useWindowScroll';
 import TopBar from '../components/TopBar';
 import NavBar from '../components/NavBar';
 
-import industria_img from '../images/header.svg';
+import industria_img from '../images/header.webp';
 
 function Header({ path }) {
   const [slide, setSlide] = useState('slideout');

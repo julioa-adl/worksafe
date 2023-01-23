@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import emailjs from '@emailjs/browser';
 
-import form_orc_img from '../../images/form_orc_img.svg'
+import form_orc_img from '../../images/form_orc_img.webp'
 import '../../styles/style.section/orcamento.sections/orcamentoForm.css';
 
 function OrcamentoForm() {

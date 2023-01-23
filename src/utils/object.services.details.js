@@ -1,9 +1,9 @@
-import capa_manutencao from '../images/img-services-details/manutencao/capa.png';
-import capa_bombeiro from '../images/img-services-details/bombeiro/capa.png';
-import capa_resgate from '../images/img-services-details/resgate/capa.png';
-import capa_arboricultura from '../images/img-services-details/arboricultura/capa.png';
-import capa_treinamento from '../images/img-services-details/treinamentos/capa.png';
-import capa_alpinismo from '../images/img-services-details/alpinismo/capa.svg';
+import capa_manutencao from '../images/img-services-details/manutencao/capa.webp';
+import capa_bombeiro from '../images/img-services-details/bombeiro/capa.webp';
+import capa_resgate from '../images/img-services-details/resgate/capa.webp';
+import capa_arboricultura from '../images/img-services-details/arboricultura/capa.webp';
+import capa_treinamento from '../images/img-services-details/treinamentos/capa.webp';
+import capa_alpinismo from '../images/img-services-details/alpinismo/capa.webp';
 
 import { FaCog } from "react-icons/fa";
 import { FaFireExtinguisher } from "react-icons/fa";
@@ -12,12 +12,12 @@ import { FaTree } from "react-icons/fa";
 import { FaHardHat } from "react-icons/fa";
 import { GiMountainClimbing } from "react-icons/gi";
 
-const img_manutencao = require.context('../images/img-services-details/manutencao/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
-const img_brigada = require.context('../images/img-services-details/bombeiro/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
-const img_resgate = require.context('../images/img-services-details/resgate/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
-const img_arboricultura = require.context('../images/img-services-details/arboricultura/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
-const img_treinamentos = require.context('../images/img-services-details/treinamentos/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
-const img_alpinismo = require.context('../images/img-services-details/alpinismo/fotos', true, /\.(png|jpg|jpeg|gif|svg)$/);
+const img_manutencao = require.context('../images/img-services-details/manutencao/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const img_brigada = require.context('../images/img-services-details/bombeiro/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const img_resgate = require.context('../images/img-services-details/resgate/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const img_arboricultura = require.context('../images/img-services-details/arboricultura/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const img_treinamentos = require.context('../images/img-services-details/treinamentos/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
+const img_alpinismo = require.context('../images/img-services-details/alpinismo/fotos', true, /\.(png|jpg|jpeg|gif|svg|webp)$/);
 
 
 const servicesDetails = [

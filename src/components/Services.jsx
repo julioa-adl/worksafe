@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 
-import alpinists from '../images/alpinists.svg';
+import alpinists from '../images/alpinists.webp';
 import services from '../utils/object.services';
 
 import useWindowSize from '../hooks/useWindowSize';

@@ -1,7 +1,7 @@
-import gestor1 from '../images/img-gestores/1.svg';
-import gestor2 from '../images/img-gestores/2.svg';
-import gestor3 from '../images/img-gestores/3.svg';
-import gestor4 from '../images/img-gestores/4.svg';
+import gestor1 from '../images/img-gestores/1.webp';
+import gestor2 from '../images/img-gestores/2.webp';
+import gestor3 from '../images/img-gestores/3.webp';
+import gestor4 from '../images/img-gestores/4.webp';
 
 const gestores = [
   {
