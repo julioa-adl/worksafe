@@ -22,12 +22,12 @@ function Services({ match }) {
   return (
     <div>
       <HeaderServices
-      tamanho={ 50 }
-      bg={ `url(${bg_services})` }
-      txt1Color='#222222'
-      txt2Color='white'
-      objNames={ {name1: 'NOSSOS ', name2: 'SERVIÇOS'} }
-      path={ url }
+        tamanho={ 50 }
+        bg={ `url(${bg_services})` }
+        txt1Color='#222222'
+        txt2Color='white'
+        objNames={ {name1: 'NOSSOS ', name2: 'SERVIÇOS'} }
+        path={ url }
       />
       <ServicesGrid/>
       <Footer/>
