@@ -31,6 +31,7 @@
 }
 
 .logo_nav_mobile {
+  width: 200px;
   display: none;
 }
 
@@ -171,7 +172,18 @@
     padding: 24px;
   }
 
+  .logo_nav_mobile {
+    display: block;
+    position: relative;
+    top: -15vh;
+    left: -30vw;
+    /* margin-bottom: 20vh; */
+  }
+
   .nav_list {
+    display: flex !important;
+    justify-content: flex-start;
+    text-align: center;
     position: fixed;
     top: -15px;
     right: -20px;
@@ -184,7 +196,7 @@
     transition: transform 0.3s ease-in;
     z-index: 1000;
     gap: 10px;
-    padding: 20vh 0 0 20%;
+    padding: 20vh 0 0 30%;
   }
 
   .NL_serv {
@@ -294,7 +306,7 @@
 
   .cote_agr {
     display: block;
-    margin-top: 25%;
+    /* margin-top: 25%; */
     padding: 5px;
     background-color: #f44336;
     border-radius: 8px;

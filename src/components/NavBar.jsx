@@ -132,7 +132,7 @@ function NavBar({ propBgColor, logo, path }) {
         style={{ transform: `translateX(${actvate})`,
           display: `${display}`, }}
         className="nav_list">
-        {/* <img className="logo_nav_mobile" src={ logo3 } alt="logo" /> */}
+        <img className="logo_nav_mobile" src={ logo2 } alt="logo" />
         <li style={{ animation: `${ fade }`, }}>
           <NavLink
             className={`NL ${path === "/" ? "active_now" : ""}`}
