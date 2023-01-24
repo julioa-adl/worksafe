@@ -177,17 +177,18 @@
 @media (max-width: 900px) {
   .footer_container {
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
   }
 
   .footer_container div {
     width: 100% !important;
-    height: 33% !important;
+    /* height: 33% !important; */
   }
 
   .resumo, .links_uteis, .infos_contato {
     gap: 10px;
     justify-content: center;
+    padding: 10px 0;
   }
 
   .conect_footer {
