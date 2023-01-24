@@ -74,6 +74,17 @@
     overflow-x: hidden;
   }
 
+  .stay_safe {
+    left: 0;
+  }
+  
+  .stay_safe_2 {
+    left: 0;
+  }
+  
+  .stay_safe_3 {
+    left: 0;
+  }
 }
 
 @media (max-width: 600px) {
