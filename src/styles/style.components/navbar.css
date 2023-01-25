@@ -104,7 +104,7 @@
   border-radius: 8px;
   position: absolute;
   top: 20px;
-  width: 200px;
+  width: 220px;
   background-color: #222222;
   animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center
