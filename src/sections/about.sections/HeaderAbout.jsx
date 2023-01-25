@@ -39,7 +39,8 @@ function HeaderAbout({ path }) {
         backgroundPosition: "top",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "60vh"
+        height: "60vh",
+        minHeight: "500px"
       }}
     >
       <TopBar/>

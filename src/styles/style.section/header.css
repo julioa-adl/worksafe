@@ -19,6 +19,7 @@
   position: absolute;
   /* margin-left: 10vw; */
   margin-top: 10vh;
+  z-index: 1;
 }
 
 .safe {
