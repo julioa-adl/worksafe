@@ -82,7 +82,7 @@ function NavBar({ propBgColor, logo, path }) {
       line2: '0',
       line3: 'rotate(45deg) translate(-5px, -7px)',
     };
-    if (size.width < 1420) {
+    if (size.width < 1148) {
       if (actvate === "100%") {
         setDisplay("flex")
         setFade(animeFade);
