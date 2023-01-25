@@ -2,6 +2,7 @@
 
 .about_main {
   flex-direction: row;
+  min-height: 400px;
 }
 
 .about_main div {
