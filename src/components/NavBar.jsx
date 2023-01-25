@@ -163,7 +163,9 @@ function NavBar({ propBgColor, logo, path }) {
                       servicesDetails.map((servs) => (
                         <NavLink
                           key={`utils${ servs.service }`}
-                          to={ `/servicos/${servs.pathName}` }>
+                          to={ `/servicos/${servs.pathName}` }
+                          onClick={ mobileNavBar }
+                        >
                           <li className="NL">
                             { servs.icon }
                             { servs.service }

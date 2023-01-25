@@ -40,6 +40,10 @@
 
 @media (max-width: 900px) {
 
+  .grid_services {
+    padding: 40px 20px;
+  }
+
   .img_serv_container {
     height: 200px;
   }

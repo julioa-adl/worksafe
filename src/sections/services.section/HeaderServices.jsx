@@ -51,7 +51,7 @@ function HeaderServices({ tamanho, bg, objNames, txt1Color, txt2Color, path}) {
             style={{
               color: `${ txt2Color }`
             }}
-          >{ objNames.name2 }</span></h1>
+          >{ ` ${objNames.name2}` }</span></h1>
       </div>
     </div>
   )

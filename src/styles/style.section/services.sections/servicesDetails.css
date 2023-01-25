@@ -46,11 +46,11 @@
 }
 
 .carousel {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .thumbs-wrapper {
-  width: 180%;
+  /* width: 180%; */
 }
 
 @media (max-width: 900px) {
@@ -58,11 +58,11 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    width: 100%;
   }
 
   .txt_details_container {
-    width: 40%;
+    /* width: 40%; */
   }
 
   .txt_service {

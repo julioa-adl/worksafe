@@ -20,10 +20,10 @@ function ServicesDetails({ match }) {
     <div>
       <HeaderServices
         tamanho={ 50 }
-        // bg={ objServ[0].cover }
-        bg='#222222'
+        // bg={ `url(${objServ[0].cover})` }
+        bg='white'
         txt1Color='#BEFF25'
-        txt2Color='#BEFF25'
+        txt2Color='#222222'
         objNames={ {name1: objServ[0].icon, name2: objServ[0].service} }  />
         <ServicesDetailsSection service={ objServ[0] }/>
         <Footer/>
