@@ -21,9 +21,9 @@ function ServicesDetails({ match }) {
       <HeaderServices
         tamanho={ 50 }
         // bg={ `url(${objServ[0].cover})` }
-        bg='white'
-        txt1Color='#BEFF25'
-        txt2Color='#222222'
+        bg='gray'
+        txt1Color='#222222'
+        txt2Color='white'
         objNames={ {name1: objServ[0].icon, name2: objServ[0].service} }  />
         <ServicesDetailsSection service={ objServ[0] }/>
         <Footer/>
