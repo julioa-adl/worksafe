@@ -9,7 +9,7 @@ function AboutUsPage() {
     <div>
       <section className="main_section_1 about_main">
         <div className='about_div_txt'>
-          <h1>QUEM SOMOS:</h1>
+          <h1>NOSSA HISTÓRIA:</h1>
           <p
             // style={{ animation: `${slide} 3s forwards`, }}
           >Somos uma empresa especializada em segurança para atividades de alto risco!<br/>
