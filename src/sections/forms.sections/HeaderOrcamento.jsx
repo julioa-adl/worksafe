@@ -40,7 +40,7 @@ function HeaderAbout() {
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        height: "60vh"
+        height: "60vh",
       }}
     >
       <TopBar/>

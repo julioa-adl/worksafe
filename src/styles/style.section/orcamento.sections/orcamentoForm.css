@@ -7,6 +7,10 @@
   min-height: 800px;
 }
 
+.header_orc {
+  min-height: "500px";
+}
+
 .img_orc {
   width: 50%;
   height: 60vh;
@@ -103,6 +107,10 @@
 @media (max-width: 600px) {
   .div_container_form h1 {
     font-size: 2em;
+  }
+
+  .header_orc {
+    min-height: "300px";
   }
 
   .img_orc {
