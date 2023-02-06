@@ -1,0 +1,191 @@
+.main-treinamentos {
+  height: 100%;
+  background-color: white;
+  padding: 5vh 10vw;
+}
+
+.title-page-trein {
+  font-family: 'Inter',sans-serif;
+  text-align: center;
+  font-size: 1.875rem;
+  color: #313723;
+}
+
+.p-page-trein {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+}
+
+.ul-page-trein {
+  padding: 50px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ul-page-trein li {
+  width: 20%;
+}
+
+.ul-page-trein li h3 {
+  font-family: 'Bebas Neue',cursive;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: #313723;
+  padding-bottom: 10px;
+}
+
+.ul-page-trein li p {
+  font-size: 1rem;
+}
+
+/* CURSOS DETAILS SECTION */
+.cursos-details {
+  background-color: #f4f8fe;
+  padding: 5vh 15vw;
+}
+
+.cursos-details h3 {
+  font-family: 'Bebas Neue',cursive;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: #313723;
+  /* color: #f44336; */
+}
+
+.cursos-details h1 {
+  font-family: 'Inter',sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #798365;
+}
+
+.cursos-list {
+  position: relative;
+  margin: 20px 0;
+  padding-bottom: 50px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cursos-list h1 {
+  text-align: center;
+  font-family: 'Bebas Neue',cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  padding-top: 7vh;
+  color: #798365;
+}
+
+.container-course-icon {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 100%;
+  background-color: #BEFF25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 2.5vw;
+  top: 5vh;
+}
+
+.course-icon {
+  font-size: 3rem;
+  color: #222222;
+}
+
+.container-cards-courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 2rem;
+}
+
+.card-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin: 10px 0;
+}
+
+.bttn-inscrevase {
+  background-color: #f44336;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.bttn-inscrevase:hover, .bttn-inscrevase:active {
+  background-color: white;
+  color: #f44336;
+}
+
+@media (max-width: 1148px) {
+  .main-treinamentos {
+    padding: 5vh 5vw;
+  }
+
+  .cursos-details {
+    background-color: #f4f8fe;
+    padding: 5vh 2.5vw;
+  }
+
+  .container-cards-courses {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-treinamentos {
+    padding: 5vh 5vw;
+  }
+
+  .cursos-details {
+    background-color: #f4f8fe;
+    padding: 5vh 2.5vw;
+  }
+
+  .ul-page-trein {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+
+  .ul-page-trein li {
+    width: 100%;
+  }
+
+  .container-cards-courses {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .p-page-trein {
+    text-align: left;
+  }
+
+  .card-course h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-cards-courses {
+    grid-template-columns: 1fr;
+  }
+}
+
