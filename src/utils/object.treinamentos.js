@@ -73,9 +73,9 @@ const courses = [
   {
     id: 7,
     icon: trabalhador,
-    course: 'NR 18 - Integração',
+    course: 'NR 18 - Montagem de Andaime',
     category: 'Trabalhador',
-    descricao: 'Condições e meios para saúde e segurança em construção civil. Aspectos importantes da NR 18, incluindo regulamentações e diretrizes para construção segura e saudável.',
+    descricao: 'Durante o curso, os participantes irão adquirir conhecimentos teóricos e práticos sobre os procedimentos corretos de montagem, uso e desmontagem de andaimes.',
     horas: '08 horas',
     valor: 'R$ 150,00'
   },
