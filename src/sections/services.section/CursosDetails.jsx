@@ -24,6 +24,7 @@ function CursosDetails() {
                   { course.course }
                   </h2>
                   <span>{ course.category }</span>
+                  <span> - </span>
                   <span>{ course.horas }</span>
                   <h3>{ course.valor }</h3>
                 </div>
