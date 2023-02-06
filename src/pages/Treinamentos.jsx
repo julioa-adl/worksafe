@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import HeaderServices from '../sections/services.section/HeaderServices';
 import MainTreinamentos from '../sections/services.section/MainTreinamentos.section';
@@ -7,10 +8,18 @@ import Footer from '../sections/Footer';
 import Direitos from '../components/Direitos';
 import bg from '../images/bg-header-treinamentos.webp'
 
-function Treinamentos() {
+function Treinamentos({ match }) {
+  const url = match.path;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    ReactGA.pageview(window.location.pathname);
+  }, []);
+
   return (
     <div>
       <HeaderServices
+      path={ url }
       tamanho={ 60 }
       bg={ `url(${bg})` }
       // bg='gray'
