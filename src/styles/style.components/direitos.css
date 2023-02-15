@@ -10,6 +10,17 @@
   padding: 10px 0;
 }
 
+.julio {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.julio:hover {
+  text-decoration: none;
+  color: #BEFF25;
+}
+
 @media (max-width: 900px) {
   .direitos_container {
     font-size: 12px;
