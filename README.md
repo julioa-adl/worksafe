@@ -1,4 +1,4 @@
-<h1>Jonathan Manutenção</h1>
+<h1>WORKSAFE BRASIL</h1>
 
 Este é o site da empresa WorkSafe Brasil - Recife/ PE, desenvolvido em React.
 
