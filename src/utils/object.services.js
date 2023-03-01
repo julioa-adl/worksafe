@@ -52,7 +52,7 @@ const services = [
     icon: <GiTeacher className="icon_serv"/>,
     service: 'Treinamentos',
     title: 'Capacite sua equipe com quem vive a segurança',
-    text: 'A Work Safe Brasil, dispõe de um centro de treinamento com uma das mais modernas estruturas de capacitação profissional na área de segurança, emergência e Resgate técnico. Nossos Cursos: NR35 - Supervisor e trabalhador; NR33 - Supervisor, Trabalhador e Vigia; Formação de Brigada de Emergência; CIPA; RTI - Resgate Técnico Industrial; APH - ATendimento Pré-Hospitalar; Içamento de Cargas.',
+    text: 'A Work Safe Brasil, dispõe de um centro de treinamento com uma das mais modernas estruturas de capacitação profissional na área de segurança, emergência e Resgate técnico. Nossos Cursos: NR35 - Supervisor e trabalhador; NR33 - Supervisor, Trabalhador e Vigia; Reciclagem de Brigada de Emergência; RTI - Resgate Técnico Industrial; APH - Atendimento Pré-Hospitalar; Içamento de Cargas.',
     image: treinamento,
     listServ: ['NR35 Trabalho em Altura - 08H', 'NR35 Supervisor de Trabalho em Altura - 40H', 'NR33 Trabalhador Autorizado e Vigia - 16H ', 'NR33 Supervisor de Entrada em Espaços Confinados - 40H'],
   },
