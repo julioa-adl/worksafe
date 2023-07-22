@@ -12,14 +12,14 @@ const gestores = [
     cargo: 'CEO & DIRETOR OPERACIONAL',
     zona: '',
   },
-  {
-    id: 1,
-    image: gestor2,
-    curriculo: 'Técnico em segurança do trabalho, técnico em segurança pública, especialistas em espaço confinado, instrutor de NR 35,  bombeiro civil com 10 anos de experiência, gestor de emergência, alpinistas e resgatista industrial.',
-    name: 'Carlos Carvalho',
-    cargo: 'DIRETOR ADM & COMERCIAL',
-    zona: '',
-  },
+  // {
+  //   id: 1,
+  //   image: gestor2,
+  //   curriculo: 'Técnico em segurança do trabalho, técnico em segurança pública, especialistas em espaço confinado, instrutor de NR 35,  bombeiro civil com 10 anos de experiência, gestor de emergência, alpinistas e resgatista industrial.',
+  //   name: 'Carlos Carvalho',
+  //   cargo: 'DIRETOR ADM & COMERCIAL',
+  //   zona: '',
+  // },
   {
     id: 2,
     image: gestor3,
