@@ -21,7 +21,7 @@ const gestores = [
   //   zona: '',
   // },
   {
-    id: 2,
+    id: 1,
     image: gestor3,
     curriculo: 'Técnico em Montagem, Alpinista Industrial, N2 de Acesso por Corda, Resgatista, Socorrista, Supervisor de Entrada de Espaços Confinados.',
     name: 'João Bezerra',
@@ -29,7 +29,7 @@ const gestores = [
     zona: '',
   },
   {
-    id: 3,
+    id: 2,
     image: gestor4,
     curriculo: 'Téc. Segurança do trabalho, Socorrista, Supervisor de Entrada de Espaços Confinados, Bombeiro Profissional Civil.',
     name: 'Osnar Lucas',
